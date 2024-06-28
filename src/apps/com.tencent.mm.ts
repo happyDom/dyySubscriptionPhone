@@ -2,11 +2,11 @@ import { defineGkdApp } from '@gkd-kit/define';
 
 export default defineGkdApp({
   id: 'com.tencent.mm',
-  name: '微信',
+  name: '微信[未安装]',
   groups: [
     {
       key: 1,
-      name: '微信朋友圈公众号广告',
+      name: '分段广告-微信朋友圈公众号广告',
       desc: '打开菜单->不感兴趣',
       enable: true,
       quickFind: true,
