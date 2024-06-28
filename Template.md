@@ -19,7 +19,7 @@
 - jsdelivr源（国内）
 
 ```txt
-https://fastly.jsdelivr.net/gh/happyDom/dyySubscriptionPhone@main/dist/gkd.json5
+https://fastly.jsdelivr.net/gh/happyDom/dyySubscriptionPhone@latest/dist/gkd.json5
 ```
 
 - GitHub源
