@@ -1,7 +1,7 @@
 import { defineGkdApp } from '@gkd-kit/define';
 
 export default defineGkdApp({
-  id: 'com.jincheng.supercaculatorx',
+  id: 'com.jincheng.supercaculator',
   name: '全能计算器[未安装]',
   groups: [
     {
