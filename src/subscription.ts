@@ -26,7 +26,7 @@ apps.forEach((appConfig) => {
 export default defineGkdSubscription({
   id: 233814,
   name: 'dyySubscription', //修改为你的规则订阅名称
-  version: 1, //根据规则的发布，这个值需要做更新（增加），当GKD检测到此版本值较新时，会触发规则更新动作
+  version: 0, //规则发布的脚本会自动管理实际发布规则的版本号,此处不需要手动修改该值
   author: 'dyy', //规则编写者名称
   checkUpdateUrl: './gkd.version.json5',
   supportUri: 'https://github.com/happyDom/dyySubscription', //修改为具体的 subscription 项目链接
