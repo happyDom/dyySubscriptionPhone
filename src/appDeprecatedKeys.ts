@@ -39,8 +39,8 @@ export const checkDeprecatedGroupKeys = (apps: RawApp[]) => {
 
 const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
   {
-    id: 'appID',
-    name: 'appIdName',
-    deprecatedKeys: [0],
+    id: 'com.tencent.mm',
+    name: '微信',
+    deprecatedKeys: [],
   },
 ];
