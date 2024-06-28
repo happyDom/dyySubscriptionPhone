@@ -16,10 +16,17 @@ export default defineGkdApp({
       rules: [
         {
           key: 100,
+          name: '广告-360借条-FrameLayout嵌套Image',
+          activityIds: ['com.jincheng.supercaculator.activity.SplashActivity'],
+          matches:
+            'TextView[text="立即申请" || text="查看详情"] <<2 FrameLayout -(-1n+5) FrameLayout > FrameLayout > ImageView[visibleToUser=true]',
+        },
+        {
+          key: 101,
           name: '广告-360借条',
           activityIds: ['com.jincheng.supercaculator.activity.SplashActivity'],
           matches:
-            'TextView[text="立即申请"] <<2 FrameLayout - FrameLayout >2 ImageView[visibleToUser=true]',
+            'TextView[text="立即申请"||text="查看详情"] <<2 FrameLayout -(-n+5) FrameLayout > ImageView[visibleToUser=true]',
         },
       ],
     },
