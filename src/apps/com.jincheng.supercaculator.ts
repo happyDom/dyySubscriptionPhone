@@ -13,20 +13,28 @@ export default defineGkdApp({
       resetMatch: 'app',
       actionCdKey: 0,
       actionMaximumKey: 0,
+      quickFind: true,
+      actionDelay: 300,
       rules: [
         {
-          key: 100,
+          key: 0,
           name: '广告-360借条-FrameLayout嵌套Image',
-          activityIds: ['com.jincheng.supercaculator.activity.SplashActivity'],
+          activityIds: [
+            'com.jincheng.supercaculator.activity.SplashActivity',
+            'com.qq.e.ads.ADActivity',
+          ],
           matches:
-            'TextView[text="立即申请" || text="查看详情"] <<2 FrameLayout -(-1n+5) FrameLayout > FrameLayout > ImageView[visibleToUser=true]',
+            'TextView[text="立即申请" || text="查看详情"|| text="了解更多"] <<2 FrameLayout -(-1n+5) FrameLayout > FrameLayout > ImageView[visibleToUser=true]',
         },
         {
-          key: 101,
+          key: 1,
           name: '广告-360借条',
-          activityIds: ['com.jincheng.supercaculator.activity.SplashActivity'],
+          activityIds: [
+            'com.jincheng.supercaculator.activity.SplashActivity',
+            'com.qq.e.ads.ADActivity',
+          ],
           matches:
-            'TextView[text="立即申请"||text="查看详情"] <<2 FrameLayout -(-n+5) FrameLayout > ImageView[visibleToUser=true]',
+            'TextView[text="立即申请"||text="查看详情"|| text="了解更多"] <<2 FrameLayout -3 FrameLayout > ImageView[visibleToUser=true]',
         },
       ],
     },
