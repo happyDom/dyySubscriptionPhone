@@ -15,11 +15,6 @@ export default defineGkdApp({
       actionMaximumKey: 0,
       quickFind: true,
       actionDelay: 300,
-      activityIds: [
-        'com.jincheng.supercaculator.activity.SplashActivity',
-        'com.qq.e.ads.ADActivity',
-        'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
-      ],
       rules: [
         {
           key: 0,
