@@ -29,49 +29,49 @@ export default defineGkdApp({
         },
         {
           key: 100,
-          name: '开屏广告-360借条-FrameLayout嵌套Image',
+          name: '开屏广告-360借条-1',
           matches:
             'TextView[text="立即申请"] <<2 FrameLayout -(-1n+5) FrameLayout > FrameLayout > ImageView[visibleToUser=true]',
         },
         {
           key: 101,
-          name: '开屏广告-360借条-FrameLayout嵌套Image',
+          name: '开屏广告-360借条-2',
           matches:
             'TextView[text="查看详情"] <<2 FrameLayout -(-1n+5) FrameLayout > FrameLayout > ImageView[visibleToUser=true]',
         },
         {
           key: 102,
-          name: '开屏广告-360借条-FrameLayout嵌套Image',
+          name: '开屏广告-360借条-3',
           matches:
             'TextView[text*="了解更多"] <<(2,3) FrameLayout -(2,3) FrameLayout > FrameLayout > ImageView[visibleToUser=true]',
         },
         {
           key: 103,
-          name: '开屏广告-360借条-FrameLayout嵌套Image',
+          name: '开屏广告-360借条-4',
           matches:
             'TextView[text="进入小程序"] <<2 FrameLayout -(-1n+5) FrameLayout > FrameLayout > ImageView[visibleToUser=true]',
         },
         {
           key: 200,
-          name: '开屏广告-360借条',
+          name: '开屏广告-360借条-5',
           matches:
             'TextView[text="立即申请"] <<2 FrameLayout -3 FrameLayout > ImageView[visibleToUser=true]',
         },
         {
           key: 201,
-          name: '开屏广告-360借条',
+          name: '开屏广告-360借条-6',
           matches:
             'TextView[text="查看详情"] <<2 FrameLayout -3 FrameLayout > ImageView[visibleToUser=true]',
         },
         {
           key: 202,
-          name: '开屏广告-360借条',
+          name: '开屏广告-360借条-7',
           matches:
             'TextView[text*="了解更多"] <<(2,3) FrameLayout -(2,3) FrameLayout > ImageView[visibleToUser=true]',
         },
         {
           key: 203,
-          name: '开屏广告-360借条',
+          name: '开屏广告-360借条-8',
           matches:
             'TextView[text="进入小程序"] <<2 FrameLayout -3 FrameLayout > ImageView[visibleToUser=true]',
         },
