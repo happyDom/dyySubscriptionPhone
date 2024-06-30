@@ -46,6 +46,6 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
   {
     id: 'com.jincheng.supercaculator',
     name: '全能计算器',
-    deprecatedKeys: [],
+    deprecatedKeys: [0, 1],
   },
 ];
