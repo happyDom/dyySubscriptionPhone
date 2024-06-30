@@ -7,20 +7,20 @@ export default defineGkdApp({
     {
       key: 1,
       name: '分段广告-朋友圈公众号广告',
-      desc: '打开菜单->不感兴趣',
+      desc: '广告->不感兴趣',
       enable: true,
       quickFind: true,
       activityIds: 'com.tencent.mm.plugin.sns.ui.improve.ImproveSnsTimelineUI',
       rules: [
         {
           key: 100,
-          name: '打开下拉菜单',
+          name: '分段广告-朋友圈公众号广告-打开下拉菜单',
           matches:
             'TextView[vid="kbq"][text*="@"] + FrameLayout[vid="kjq"] >2 ImageView[visibleToUser=true]',
         },
         {
           key: 101,
-          name: '不感兴趣',
+          name: '分段广告-朋友圈公众号广告-不感兴趣',
           preKeys: [100],
           matches:
             '@TextView[text$="不感兴趣"] <<(-1n+5) ViewGroup <2 FrameLayout[depth=0]',
@@ -38,19 +38,19 @@ export default defineGkdApp({
       rules: [
         {
           key: 200,
-          name: '打开下拉菜单',
+          name: '分段广告-订阅号文章广告卡片-打开下拉菜单',
           matches: '[text="广告"][visibleToUser=true] + Image',
         },
         {
           key: 201,
-          name: '关闭此广告',
+          name: '分段广告-订阅号文章广告卡片-关闭此广告-1',
           preKeys: [200],
           matches:
             '[text="广告"][visibleToUser=true] <(1,2) * + * > *[index=0]',
         },
         {
           key: 202,
-          name: '关闭此广告',
+          name: '分段广告-订阅号文章广告卡片-关闭此广告-2',
           preKeys: [201],
           matches:
             '[text="广告"][visibleToUser=true] <(1,2) * + * > *[index=0]',
