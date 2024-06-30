@@ -5,7 +5,7 @@ export default defineGkdApp({
   name: '微信[未安装]',
   groups: [
     {
-      key: 1,
+      key: 0,
       name: '分段广告-朋友圈公众号广告',
       desc: '广告->不感兴趣',
       enable: true,
@@ -13,22 +13,22 @@ export default defineGkdApp({
       activityIds: 'com.tencent.mm.plugin.sns.ui.improve.ImproveSnsTimelineUI',
       rules: [
         {
-          key: 100,
+          key: 0,
           name: '分段广告-朋友圈公众号广告-打开下拉菜单',
           matches:
             'TextView[vid="kbq"][text*="@"] + FrameLayout[vid="kjq"] >2 ImageView[visibleToUser=true]',
         },
         {
-          key: 101,
+          key: 1,
           name: '分段广告-朋友圈公众号广告-不感兴趣',
-          preKeys: [100],
+          preKeys: [0],
           matches:
             '@TextView[text$="不感兴趣"] <<(-1n+5) ViewGroup <2 FrameLayout[depth=0]',
         },
       ],
     },
     {
-      key: 2,
+      key: 1,
       name: '分段广告-订阅号文章广告卡片',
       desc: '广告->关闭广告',
       enable: true,
@@ -37,21 +37,21 @@ export default defineGkdApp({
         'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
       rules: [
         {
-          key: 200,
+          key: 0,
           name: '分段广告-订阅号文章广告卡片-打开下拉菜单',
           matches: '[text="广告"][visibleToUser=true] + Image',
         },
         {
-          key: 201,
+          key: 1,
           name: '分段广告-订阅号文章广告卡片-关闭此广告-1',
-          preKeys: [200],
+          preKeys: [0],
           matches:
             '[text="广告"][visibleToUser=true] <(1,2) * + * > *[index=0]',
         },
         {
-          key: 202,
+          key: 2,
           name: '分段广告-订阅号文章广告卡片-关闭此广告-2',
-          preKeys: [201],
+          preKeys: [1],
           matches:
             '[text="广告"][visibleToUser=true] <(1,2) * + * > *[index=0]',
         },

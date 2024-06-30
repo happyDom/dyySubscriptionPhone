@@ -12,7 +12,7 @@ interface RawDeprecatedKeysSetting {
   name: string;
 
   /**
-   * 废弃的规则key值，所列出的id值，不允许被使用
+   * 废弃的规则组key值，所列出的id值，不允许被使用
    */
   deprecatedKeys: number[];
 }
@@ -46,6 +46,6 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
   {
     id: 'com.jincheng.supercaculator',
     name: '全能计算器',
-    deprecatedKeys: [0, 1],
+    deprecatedKeys: [],
   },
 ];
