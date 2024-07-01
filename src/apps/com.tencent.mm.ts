@@ -14,13 +14,13 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          name: '分段广告-朋友圈公众号广告-打开下拉菜单',
+          name: '打开下拉菜单',
           matches:
             'TextView[vid="kbq"][text*="@"] + FrameLayout[vid="kjq"] >2 ImageView[visibleToUser=true]',
         },
         {
           key: 1,
-          name: '分段广告-朋友圈公众号广告-不感兴趣',
+          name: '不感兴趣',
           preKeys: [0],
           matches:
             '@TextView[text$="不感兴趣"] <<(-1n+5) ViewGroup <2 FrameLayout[depth=0]',
@@ -38,19 +38,19 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          name: '分段广告-订阅号文章广告卡片-打开下拉菜单',
+          name: '打开下拉菜单',
           matches: '[text="广告"][visibleToUser=true] + Image',
         },
         {
           key: 1,
-          name: '分段广告-订阅号文章广告卡片-关闭此广告-1',
+          name: '关闭此广告-1',
           preKeys: [0],
           matches:
             '[text="广告"][visibleToUser=true] <(1,2) * + * > *[index=0]',
         },
         {
           key: 2,
-          name: '分段广告-订阅号文章广告卡片-关闭此广告-2',
+          name: '关闭此广告-2',
           preKeys: [1],
           matches:
             '[text="广告"][visibleToUser=true] <(1,2) * + * > *[index=0]',
