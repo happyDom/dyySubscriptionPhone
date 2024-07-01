@@ -48,4 +48,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '全能计算器',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.smile.gifmaker',
+    name: '快手',
+    deprecatedKeys: [],
+  },
 ];
