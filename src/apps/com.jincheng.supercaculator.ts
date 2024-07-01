@@ -18,55 +18,55 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          name: '开屏广告-360借条-带有广告标识字',
+          name: '360借条-带有广告标识字',
           actionDelay: 450,
           matches: '[text="广告"] <<4 View +2 View > Image',
         },
         {
           key: 1,
-          name: '开屏广告-360借条-1',
+          name: '360借条-1',
           matches:
             'TextView[text="立即申请"] <<2 FrameLayout -(-1n+5) FrameLayout > FrameLayout > ImageView[visibleToUser=true]',
         },
         {
           key: 2,
-          name: '开屏广告-360借条-2',
+          name: '360借条-2',
           matches:
             'TextView[text="查看详情"] <<2 FrameLayout -(-1n+5) FrameLayout > FrameLayout > ImageView[visibleToUser=true]',
         },
         {
           key: 3,
-          name: '开屏广告-360借条-3',
+          name: '360借条-3',
           matches:
             'TextView[text*="了解更多"] <<(2,3) FrameLayout -(2,3) FrameLayout > FrameLayout > ImageView[visibleToUser=true]',
         },
         {
           key: 4,
-          name: '开屏广告-360借条-4',
+          name: '360借条-4',
           matches:
             'TextView[text="进入小程序"] <<2 FrameLayout -(-1n+5) FrameLayout > FrameLayout > ImageView[visibleToUser=true]',
         },
         {
           key: 5,
-          name: '开屏广告-360借条-5',
+          name: '360借条-5',
           matches:
             'TextView[text="立即申请"] <<2 FrameLayout -3 FrameLayout > ImageView[visibleToUser=true]',
         },
         {
           key: 6,
-          name: '开屏广告-360借条-6',
+          name: '360借条-6',
           matches:
             'TextView[text="查看详情"] <<2 FrameLayout -3 FrameLayout > ImageView[visibleToUser=true]',
         },
         {
           key: 7,
-          name: '开屏广告-360借条-7',
+          name: '360借条-7',
           matches:
             'TextView[text*="了解更多"] <<(2,3) FrameLayout -(2,3) FrameLayout > ImageView[visibleToUser=true]',
         },
         {
           key: 8,
-          name: '开屏广告-360借条-8',
+          name: '360借条-8',
           matches:
             'TextView[text="进入小程序"] <<2 FrameLayout -3 FrameLayout > ImageView[visibleToUser=true]',
         },
