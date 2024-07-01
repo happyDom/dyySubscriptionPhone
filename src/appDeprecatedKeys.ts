@@ -53,4 +53,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '快手',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.zhihu.android',
+    name: '知乎',
+    deprecatedKeys: [],
+  },
 ];
