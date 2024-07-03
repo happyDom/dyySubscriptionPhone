@@ -58,4 +58,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '知乎',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.kuaishou.nebula',
+    name: '快手极速版',
+    deprecatedKeys: [],
+  },
 ];
