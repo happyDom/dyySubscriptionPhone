@@ -1,5 +1,6 @@
 import { defineGkdApp } from '@gkd-kit/define';
 
+// 全能计算器
 export default defineGkdApp({
   id: 'com.jincheng.supercaculator',
   name: '全能计算器[未安装]',

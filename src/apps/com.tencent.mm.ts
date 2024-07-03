@@ -31,7 +31,7 @@ export default defineGkdApp({
       key: 1,
       name: '分段广告-订阅号文章广告卡片',
       desc: '广告->关闭广告',
-      enable: true,
+      enable: false,
       quickFind: true,
       activityIds:
         'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
@@ -39,7 +39,7 @@ export default defineGkdApp({
         {
           key: 0,
           name: '打开下拉菜单',
-          matches: '[text="广告"][visibleToUser=true] + Image',
+          matches: '[text="广告"][visibleToUser=true][top<1909] + Image',
         },
         {
           key: 1,

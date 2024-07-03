@@ -1,5 +1,6 @@
 import { defineGkdApp } from '@gkd-kit/define';
 
+// 快手
 export default defineGkdApp({
   id: 'com.smile.gifmaker',
   name: '快手[未安装]',
