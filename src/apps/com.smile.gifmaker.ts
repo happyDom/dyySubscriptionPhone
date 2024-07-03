@@ -21,5 +21,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 1,
+      name: '全屏广告-今日小确幸',
+      desc: '点 x',
+      enable: false,
+      quickFind: true,
+      activityIds: 'com.yxcorp.gifshow.HomeActivity',
+      rules: [
+        {
+          key: 0,
+          name: '点击不确定',
+          matches: 'Button[text=" "][visibleToUser=true] + ImageView',
+        },
+      ],
+    },
   ],
 });
