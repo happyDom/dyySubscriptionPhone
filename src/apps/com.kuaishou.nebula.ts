@@ -1,6 +1,6 @@
 import { defineGkdApp } from '@gkd-kit/define';
 
-// 快手
+// 快手极速版
 export default defineGkdApp({
   id: 'com.kuaishou.nebula',
   name: '快手极速版[未安装]',

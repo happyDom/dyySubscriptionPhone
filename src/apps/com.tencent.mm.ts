@@ -1,5 +1,6 @@
 import { defineGkdApp } from '@gkd-kit/define';
 
+// 微信
 export default defineGkdApp({
   id: 'com.tencent.mm',
   name: '微信[未安装]',
