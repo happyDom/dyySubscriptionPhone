@@ -45,14 +45,14 @@ export default defineGkdApp({
         {
           key: 101,
           name: '关闭此广告-1',
-          preKeys: [0],
+          preKeys: [100],
           matches:
             '[text="广告"][visibleToUser=true] <(1,2) * + * > *[index=0]',
         },
         {
           key: 102,
           name: '关闭此广告-2',
-          preKeys: [1],
+          preKeys: [101],
           matches:
             '[text="广告"][visibleToUser=true] <(1,2) * + * > *[index=0]',
         },
