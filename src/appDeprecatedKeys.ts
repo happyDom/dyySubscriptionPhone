@@ -63,4 +63,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '快手极速版',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.ss.android.ugc.aweme.lite',
+    name: '抖音极速版',
+    deprecatedKeys: [],
+  },
 ];
