@@ -32,7 +32,7 @@ export default defineGkdApp({
       key: 1,
       name: '分段广告-订阅号文章广告卡片',
       desc: '广告->关闭广告',
-      enable: false,
+      enable: true,
       quickFind: true,
       activityIds:
         'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
