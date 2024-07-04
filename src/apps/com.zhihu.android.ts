@@ -26,7 +26,8 @@ export default defineGkdApp({
       desc: '依次点击 新增关注->评论转发',
       enable: true,
       quickFind: true,
-      actionDelay: 550,
+      actionDelay: 450,
+      actionCdKey: 100,
       activityIds: 'com.zhihu.android.app.ui.activity.HostActivity',
       rules: [
         {
