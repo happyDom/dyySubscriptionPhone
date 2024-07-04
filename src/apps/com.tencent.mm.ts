@@ -39,13 +39,13 @@ export default defineGkdApp({
       rules: [
         {
           key: 100,
-          name: '打开下拉菜单',
+          name: '打开下拉菜单-第1类',
           matches:
             '[text="广告"][visibleToUser=true][top<1909] + @Image <n [childCount=3] <<4 [childCount=1]',
         },
         {
           key: 101,
-          name: '打开下拉菜单',
+          name: '打开下拉菜单-第2类',
           matches:
             '[text="广告"][visibleToUser=true][top<1909] + @Image <n [childCount=2] <<6 [childCount=1]',
         },
