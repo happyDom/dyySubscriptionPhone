@@ -46,6 +46,7 @@ export default defineGkdApp({
         {
           key: 101,
           name: '打开下拉菜单-第2类',
+          actionCdKey: 100,
           matches:
             '[text="广告"][visibleToUser=true][top<1909] + @Image <n [childCount=2] <<6 [childCount=1]',
         },
