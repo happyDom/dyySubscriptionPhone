@@ -68,4 +68,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '抖音极速版',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.vivaldi.browser',
+    name: 'vivaldi浏览器',
+    deprecatedKeys: [],
+  },
 ];
