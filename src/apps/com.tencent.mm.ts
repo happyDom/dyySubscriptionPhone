@@ -40,61 +40,28 @@ export default defineGkdApp({
         {
           key: 100,
           name: '打开下拉菜单',
-          matches: '[text="广告"][visibleToUser=true][top<1909] + Image',
+          matches:
+            '[text="广告"][visibleToUser=true][top<1909] + @Image <n [childCount=3] <<4 [childCount=1]',
         },
         {
           key: 101,
-          name: '关闭此广告-1',
-          preKeys: [100],
+          name: '打开下拉菜单',
           matches:
-            '[text="广告"][visibleToUser=true] <(1,2) * + * > *[index=0]',
+            '[text="广告"][visibleToUser=true][top<1909] + @Image <n [childCount=2] <<6 [childCount=1]',
         },
         {
           key: 102,
-          name: '关闭此广告-2',
-          preKeys: [101],
+          name: '关闭此广告-1',
+          preKeys: [100, 101],
           matches:
             '[text="广告"][visibleToUser=true] <(1,2) * + * > *[index=0]',
         },
-      ],
-    },
-    {
-      key: 2,
-      name: '分段广告-订阅号文章列表页广告卡片',
-      desc: '广告->关闭广告',
-      enable: false,
-      quickFind: true,
-      activityIds:
-        'com.tencent.mm.plugin.brandservice.ui.flutter.BizFlutterTLFlutterViewActivity',
-      rules: [
         {
-          key: 200,
-          name: '打开下拉菜单',
-          matches: 'View[desc="广告"]',
-          position: {
-            right: 'width*0.1352',
-            top: 'width*0.0852',
-          },
-        },
-        {
-          key: 201,
-          name: '点 不感兴趣',
-          preKeys: [200],
-          matches: '[desc="菜单"] +n View[childCount=0]',
-          position: {
-            left: 'width*0.5',
-            top: 'height*0.5',
-          },
-        },
-        {
-          key: 202,
-          name: '点 与我无关',
-          preKeys: [201],
-          matches: '[desc="菜单"] +n View[childCount=0]',
-          position: {
-            left: 'width*0.333',
-            bottom: 'height*0.4',
-          },
+          key: 103,
+          name: '关闭此广告-2',
+          preKeys: [102],
+          matches:
+            '[text="广告"][visibleToUser=true] <(1,2) * + * > *[index=0]',
         },
       ],
     },
