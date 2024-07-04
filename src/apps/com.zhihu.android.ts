@@ -24,7 +24,7 @@ export default defineGkdApp({
       key: 1,
       name: '功能类-自动查看新消息',
       desc: '依次点击 新增关注->评论转发',
-      enable: false,
+      enable: true,
       quickFind: true,
       actionDelay: 550,
       activityIds: 'com.zhihu.android.app.ui.activity.HostActivity',
