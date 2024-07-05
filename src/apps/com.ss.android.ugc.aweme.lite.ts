@@ -17,7 +17,7 @@ export default defineGkdApp({
           key: 0,
           name: '点 展开',
           actionDelay: 330,
-          matches: '[vid="ny3"][text="展开"][visibleToUser=true]',
+          matches: '[text="展开"][visibleToUser=true]',
         },
       ],
     },
