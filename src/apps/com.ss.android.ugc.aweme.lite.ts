@@ -69,5 +69,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 4,
+      name: '功能类-推荐关注按钮',
+      desc: '点 不感兴趣',
+      enable: false,
+      quickFind: true,
+      activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
+      rules: [
+        {
+          key: 400,
+          name: '点 不感兴趣',
+          matches: '[text="不感兴趣"][visibleToUser=true][clickable=true]',
+        },
+      ],
+    },
   ],
 });
