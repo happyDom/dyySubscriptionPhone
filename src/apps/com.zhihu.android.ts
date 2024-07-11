@@ -52,5 +52,26 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      name: '分段广告-信息流广告',
+      key: 2,
+      desc: '关闭->点第一个选项',
+      enable: true,
+      quickFind: true,
+      activityIds: ['com.zhihu.android.app.ui.activity.MainActivity'],
+      rules: [
+        {
+          key: 200,
+          matches:
+            '[text^="广告"][text$="立即查看"][visibleToUser=true] < * + * > ImageView',
+        },
+        {
+          key: 250,
+          preKeys: [200],
+          matches:
+            '[vid="recycler_view"] > [index=0][visibleToUser=true] >3 [vid="tv_content"]',
+        },
+      ],
+    },
   ],
 });
