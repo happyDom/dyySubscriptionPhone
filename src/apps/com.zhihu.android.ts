@@ -58,11 +58,11 @@ export default defineGkdApp({
       desc: '关闭->点第一个选项',
       enable: true,
       quickFind: true,
-      activityIds: ['com.zhihu.android.app.ui.activity.MainActivity'],
       rules: [
         {
           key: 200,
-          name: '点 x',
+          name: '点 x[200]',
+          activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
           matches:
             '[text^="广告"][text$="立即查看"][visibleToUser=true] < * + * > ImageView',
         },
@@ -86,7 +86,8 @@ export default defineGkdApp({
           key: 300,
           name: '点 x[300]',
           activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
-          matches: '[text=" 的广告"][visibleToUser=true] <<4 * +3 * ImageView',
+          matches:
+            '[text=" 的广告"][visibleToUser=true] <<4 * +3 * ImageView[visibleToUser=true]',
         },
         {
           key: 301,
@@ -100,7 +101,8 @@ export default defineGkdApp({
           key: 302,
           name: '点 x[302]',
           activityIds: 'com.zhihu.android.ContentActivity',
-          matches: '[text$="的广告"][visibleToUser=true] <3 * +4 * ImageView',
+          matches:
+            '[text$="的广告"][visibleToUser=true] <3 * +4 * ImageView[visibleToUser=true]',
         },
         {
           key: 325,
