@@ -73,14 +73,29 @@ export default defineGkdApp({
       key: 4,
       name: '功能类-推荐关注按钮',
       desc: '点 不感兴趣',
-      enable: false,
+      enable: true,
       quickFind: true,
       activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
       rules: [
         {
           key: 400,
-          name: '点 不感兴趣',
+          name: '点 不感兴趣[400]',
           matches: '[text="不感兴趣"][visibleToUser=true][clickable=true]',
+        },
+      ],
+    },
+    {
+      key: 5,
+      name: '功能类-评论提醒',
+      desc: '点 x',
+      enable: true,
+      quickFind: true,
+      activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
+      rules: [
+        {
+          key: 500,
+          name: '点 x[500]',
+          matches: '@[vid="i3l"][desc="关闭"] - [text="及时获得评论回复提醒"]',
         },
       ],
     },
