@@ -81,18 +81,32 @@ export default defineGkdApp({
       desc: '关闭->点第一个选项',
       enable: true,
       quickFind: true,
-      activityIds: ['com.zhihu.android.app.ui.activity.MainActivity'],
       rules: [
         {
           key: 300,
-          name: '点 x',
+          name: '点 x[300]',
+          activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
           matches: '[text=" 的广告"][visibleToUser=true] <<4 * +3 * ImageView',
+        },
+        {
+          key: 301,
+          name: '点 x[301]',
+          activityIds:
+            'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
+          matches:
+            '[text$="的广告"][visibleToUser=true] <2 * +2 ImageView[clickable=true]',
+        },
+        {
+          key: 302,
+          name: '点 x[302]',
+          activityIds: 'com.zhihu.android.ContentActivity',
+          matches: '[text$="的广告"][visibleToUser=true] <3 * +4 * ImageView',
         },
         {
           key: 325,
           name: '',
-          preKeys: [300],
-          matches: '[text$="不感兴趣"][visibleToUser=true]',
+          preKeys: [300, 301, 302],
+          matches: '[text$="不感兴趣"][visibleToUser=true][vid="tv_content"]',
         },
       ],
     },
