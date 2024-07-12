@@ -34,33 +34,39 @@ export default defineGkdApp({
       desc: '广告->关闭广告',
       enable: true,
       quickFind: true,
-      activityIds:
-        'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
       rules: [
         {
           key: 100,
-          name: '打开下拉菜单-第1类',
+          name: '点广告[100]',
+          activityIds:
+            'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
           matches:
             '[text="广告"][visibleToUser=true][top<1909] + @Image <n [childCount=3] <<4 [childCount=1]',
         },
         {
           key: 101,
-          name: '打开下拉菜单-第2类',
+          name: '点广告[101]',
           actionCdKey: 100,
+          activityIds:
+            'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
           matches:
             '[text="广告"][visibleToUser=true][top<1909] + @Image <n [childCount=2] <<6 [childCount=1]',
         },
         {
-          key: 102,
-          name: '关闭此广告-1',
+          key: 125,
+          name: '关闭此广告[125]',
           preKeys: [100, 101],
+          activityIds:
+            'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
           matches:
             '[text="广告"][visibleToUser=true] <(1,2) * + * > *[index=0]',
         },
         {
-          key: 103,
-          name: '关闭此广告-2',
-          preKeys: [102],
+          key: 136,
+          name: '关闭此广告[136]',
+          preKeys: [125],
+          activityIds:
+            'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
           matches:
             '[text="广告"][visibleToUser=true] <(1,2) * + * > *[index=0]',
         },
