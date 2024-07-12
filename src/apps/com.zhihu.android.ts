@@ -7,7 +7,7 @@ export default defineGkdApp({
   groups: [
     {
       key: 0,
-      name: '全屏广告-开启重要消息通知',
+      name: '全屏广告-重要消息通知',
       desc: 'x 掉',
       enable: true,
       quickFind: true,
@@ -53,7 +53,7 @@ export default defineGkdApp({
       ],
     },
     {
-      name: '分段广告-信息流广告',
+      name: '分段广告-广告xxxx立即查看', // 广告・xxxx・立即查看
       key: 2,
       desc: '关闭->点第一个选项',
       enable: true,
@@ -62,14 +62,37 @@ export default defineGkdApp({
       rules: [
         {
           key: 200,
+          name: '点 x',
           matches:
             '[text^="广告"][text$="立即查看"][visibleToUser=true] < * + * > ImageView',
         },
         {
-          key: 250,
+          key: 225,
+          name: '点第一个选项',
           preKeys: [200],
           matches:
             '[vid="recycler_view"] > [index=0][visibleToUser=true] >3 [vid="tv_content"]',
+        },
+      ],
+    },
+    {
+      name: '分段广告-xxx的广告', // xxxx 的广告
+      key: 3,
+      desc: '关闭->点第一个选项',
+      enable: true,
+      quickFind: true,
+      activityIds: ['com.zhihu.android.app.ui.activity.MainActivity'],
+      rules: [
+        {
+          key: 300,
+          name: '点 x',
+          matches: '[text=" 的广告"][visibleToUser=true] <<4 * +3 * ImageView',
+        },
+        {
+          key: 325,
+          name: '',
+          preKeys: [300],
+          matches: '[text$="不感兴趣"][visibleToUser=true]',
         },
       ],
     },
