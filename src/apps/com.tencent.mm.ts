@@ -54,7 +54,7 @@ export default defineGkdApp({
         },
         {
           key: 125,
-          name: '关闭此广告[125]',
+          name: '不感兴趣[125]',
           preKeys: [100, 101],
           activityIds:
             'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
@@ -63,7 +63,7 @@ export default defineGkdApp({
         },
         {
           key: 136,
-          name: '关闭此广告[136]',
+          name: '与我无关[136]',
           preKeys: [125],
           activityIds:
             'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
