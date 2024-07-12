@@ -30,7 +30,7 @@ export default defineGkdApp({
     },
     {
       key: 1,
-      name: '分段广告-订阅号文章广告卡片',
+      name: '分段广告-订阅号文章内广告卡片',
       desc: '广告->关闭广告',
       enable: true,
       quickFind: true,
@@ -69,6 +69,85 @@ export default defineGkdApp({
             'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
           matches:
             '[text="广告"][visibleToUser=true] <(1,2) * + * > *[index=0]',
+        },
+      ],
+    },
+    {
+      key: 2,
+      name: '分段广告-订阅号文章列表广告卡片',
+      desc: '广告->关闭广告',
+      actionDelay: 200,
+      enable: true,
+      quickFind: true,
+      rules: [
+        {
+          key: 200,
+          name: '点广告[200]',
+          activityIds:
+            'com.tencent.mm.plugin.brandservice.ui.flutter.BizFlutterTLFlutterViewActivity',
+          matches:
+            '@View[desc="广告"][visibleToUser=true] < [childCount=1] <2 * < * - Button[desc="菜单"]',
+          position: { left: 'width*0.87037', top: 'height*0.07266' },
+        },
+        {
+          key: 201,
+          name: '不感兴趣[201]',
+          preKeys: [200],
+          activityIds:
+            'com.tencent.mm.plugin.brandservice.ui.flutter.BizFlutterTLFlutterViewActivity',
+          matches:
+            'View[desc="广告"][visibleToUser=true] < [childCount=1] <2 * < * - Button[desc="菜单"] +2 View',
+          position: { left: 'width*0.52222', top: 'height*0.4217' },
+        },
+        {
+          key: 202,
+          name: '不感兴趣[202]',
+          preKeys: [200],
+          activityIds:
+            'com.tencent.mm.plugin.brandservice.ui.flutter.BizFlutterTLFlutterViewActivity',
+          matches:
+            'View[desc="广告"] < [childCount=1] <2 * < * - @View[visibleToUser=true] - Button[desc="菜单"]',
+          position: { left: 'width*0.52222', top: 'height*0.4217' },
+        },
+        {
+          key: 225,
+          name: '与我无关[225]',
+          preKeys: [201],
+          activityIds:
+            'com.tencent.mm.plugin.brandservice.ui.flutter.BizFlutterTLFlutterViewActivity',
+          matches:
+            'View[desc="广告"] < [childCount=1] <2 * < * - @View[visibleToUser=true] - Button[desc="菜单"]',
+          position: { left: 'width*0.188889', top: 'height*0.4186' },
+        },
+        {
+          key: 226,
+          name: '与我无关[226]',
+          preKeys: [202],
+          activityIds:
+            'com.tencent.mm.plugin.brandservice.ui.flutter.BizFlutterTLFlutterViewActivity',
+          matches:
+            'View[desc="广告"] < [childCount=1] <2 * < * - @View[visibleToUser=true] - Button[desc="菜单"]',
+          position: { left: 'width*0.188889', top: 'height*0.4186' },
+        },
+        {
+          key: 250,
+          name: '确定[250]',
+          preKeys: [225],
+          activityIds:
+            'com.tencent.mm.plugin.brandservice.ui.flutter.BizFlutterTLFlutterViewActivity',
+          matches:
+            'View[desc="广告"] < [childCount=1] <2 * < * - @View[visibleToUser=true] - Button[desc="菜单"]',
+          position: { left: 'width*0.84444', top: 'height*0.1503876' },
+        },
+        {
+          key: 251,
+          name: '确定[251]',
+          preKeys: [226],
+          activityIds:
+            'com.tencent.mm.plugin.brandservice.ui.flutter.BizFlutterTLFlutterViewActivity',
+          matches:
+            'View[desc="广告"] < [childCount=1] <2 * < * - @View[visibleToUser=true] - Button[desc="菜单"]',
+          position: { left: 'width*0.84444', top: 'height*0.1503876' },
         },
       ],
     },
