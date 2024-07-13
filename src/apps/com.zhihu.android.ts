@@ -53,7 +53,7 @@ export default defineGkdApp({
       ],
     },
     {
-      name: '分段广告-广告xxxx立即查看', // 广告・xxxx・立即查看
+      name: '分段广告-广告xxxx立即查看', // 广告・xxxx・立即查看, 广告・xxxx・热度
       key: 2,
       desc: '关闭->点第一个选项',
       enable: true,
@@ -63,12 +63,11 @@ export default defineGkdApp({
           key: 200,
           name: '点 x[200]',
           activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
-          matches:
-            '[text^="广告"][text$="立即查看"][visibleToUser=true] < * + * > ImageView',
+          matches: '[text^="广告 · "][visibleToUser=true] < * + * > ImageView',
         },
         {
           key: 225,
-          name: '点第一个选项',
+          name: '点第一个选项[225]',
           preKeys: [200],
           matches:
             '[vid="recycler_view"] > [index=0][visibleToUser=true] >3 [vid="tv_content"]',
