@@ -53,7 +53,7 @@ export default defineGkdApp({
       ],
     },
     {
-      name: '分段广告-广告xxxx立即查看', // 广告・xxxx・立即查看, 广告・xxxx・热度, xxxx・商品介绍
+      name: '分段广告-广告・xxxx/・商品介绍', // 广告・xxxx・立即查看, 广告・xxxx・热度, xxxx・商品介绍
       key: 2,
       desc: '关闭->点第一个选项',
       enable: true,
