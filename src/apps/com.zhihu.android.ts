@@ -105,7 +105,7 @@ export default defineGkdApp({
         },
         {
           key: 325,
-          name: '',
+          name: '不感兴趣[325]',
           preKeys: [300, 301, 302],
           matches: '[text$="不感兴趣"][visibleToUser=true][vid="tv_content"]',
         },
