@@ -32,28 +32,28 @@ export default defineGkdApp({
       rules: [
         {
           key: 100,
-          name: '点开新增关注',
+          name: '新增关注',
           matches: '[text="新增关注"] - [vid="count_view"] - ImageView',
         },
         {
           key: 101,
-          name: '点开收藏了我',
+          name: '收藏了我',
           matches: '[text="收藏了我"] - [vid="count_view"] - ImageView',
         },
         {
           key: 102,
-          name: '点开赞同喜欢',
+          name: '赞同喜欢',
           matches: '[text="赞同喜欢"] - [vid="count_view"] - ImageView',
         },
         {
           key: 103,
-          name: '点开评论转发',
+          name: '评论转发',
           matches: '[text="评论转发"] - [vid="count_view"] - ImageView',
         },
       ],
     },
     {
-      name: '分段广告-广告xxxx立即查看', // 广告・xxxx・立即查看, 广告・xxxx・热度
+      name: '分段广告-广告xxxx立即查看', // 广告・xxxx・立即查看, 广告・xxxx・热度, xxxx・商品介绍
       key: 2,
       desc: '关闭->点第一个选项',
       enable: true,
@@ -66,9 +66,16 @@ export default defineGkdApp({
           matches: '[text^="广告 · "][visibleToUser=true] < * + * > ImageView',
         },
         {
+          key: 201,
+          name: '点 x[201]',
+          activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
+          matches:
+            '[text="· 商品介绍"][visibleToUser=true] <2 * + * > ImageView',
+        },
+        {
           key: 225,
           name: '点第一个选项[225]',
-          preKeys: [200],
+          preKeys: [200, 201],
           matches:
             '[vid="recycler_view"] > [index=0][visibleToUser=true] >3 [vid="tv_content"]',
         },
