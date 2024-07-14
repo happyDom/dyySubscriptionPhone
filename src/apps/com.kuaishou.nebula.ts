@@ -21,5 +21,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 2,
+      name: '全屏广告-恭喜获得免费红包',
+      desc: '点 x',
+      enable: true,
+      quickFind: true,
+      activityIds: 'com.yxcorp.gifshow.HomeActivity',
+      rules: [
+        {
+          key: 200,
+          name: '点 x[200]',
+          matches: '@ImageView[clickable=true] -n [text="恭喜获得免费红包"]',
+        },
+      ],
+    },
   ],
 });
