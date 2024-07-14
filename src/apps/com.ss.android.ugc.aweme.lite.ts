@@ -24,7 +24,7 @@ export default defineGkdApp({
     {
       key: 1,
       name: '功能类-动态提醒弹窗',
-      desc: '点 暂不开启',
+      desc: '暂不开启',
       actionMaximum: 1,
       enable: true,
       quickFind: true,
@@ -32,7 +32,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 100,
-          name: '点 暂不开启',
+          name: '暂不开启[100]',
           matches:
             '[vid="ky_"][text="及时获得动态提醒"] +n [vid="i2e"][text="暂不开启"]',
         },
@@ -40,7 +40,7 @@ export default defineGkdApp({
     },
     {
       key: 2,
-      name: '功能类-评论氛围满意调查',
+      name: '功能类-评论氛围',
       desc: '点 x',
       enable: true,
       quickFind: true,
@@ -48,7 +48,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 200,
-          name: '点 x',
+          name: '点 x[200]',
           matches: '[text*="评论氛围是否满意"] + [text="关闭,按钮"]',
         },
       ],
@@ -63,7 +63,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 300,
-          name: '点 不感兴趣',
+          name: '不感兴趣[300]',
           actionDelay: 330,
           matches: '@FlattenUIText[text="不感兴趣"] + [text="查看更多好物"]',
         },
@@ -79,7 +79,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 400,
-          name: '点 不感兴趣[400]',
+          name: '不感兴趣[400]',
           matches: '[text="不感兴趣"][visibleToUser=true][clickable=true]',
         },
       ],
