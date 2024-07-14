@@ -53,7 +53,7 @@ export default defineGkdApp({
       ],
     },
     {
-      name: '分段广告-广告・xxxx/・商品介绍', // 广告・xxxx・立即查看, 广告・xxxx・热度, xxxx・商品介绍
+      name: '分段广告-广告・xxxx・立即查看/热度xxx',
       key: 2,
       desc: '关闭->点第一个选项',
       enable: true,
@@ -61,21 +61,14 @@ export default defineGkdApp({
       rules: [
         {
           key: 200,
-          name: '点 x[200]',
+          name: '点 x',
           activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
           matches: '[text^="广告 · "][visibleToUser=true] < * + * > ImageView',
         },
         {
-          key: 201,
-          name: '点 x[201]',
-          activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
-          matches:
-            '[text="· 商品介绍"][visibleToUser=true] <2 * + * > ImageView',
-        },
-        {
           key: 225,
           name: '点第一个选项[225]',
-          preKeys: [200, 201],
+          preKeys: [200],
           matches:
             '[vid="recycler_view"] > [index=0][visibleToUser=true] >3 [vid="tv_content"]',
         },
@@ -115,6 +108,52 @@ export default defineGkdApp({
           name: '不感兴趣[325]',
           preKeys: [300, 301, 302],
           matches: '[text$="不感兴趣"][visibleToUser=true][vid="tv_content"]',
+        },
+      ],
+    },
+    {
+      name: '分段广告-xxxx・商品介绍',
+      key: 4,
+      desc: '关闭->点第一个选项',
+      enable: true,
+      quickFind: true,
+      rules: [
+        {
+          key: 400,
+          name: '点 x',
+          activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
+          matches:
+            '[text="· 商品介绍"][visibleToUser=true] <2 * + * > ImageView',
+        },
+        {
+          key: 425,
+          name: '点第一个选项[425]',
+          preKeys: [400],
+          matches:
+            '[vid="recycler_view"] > [index=0][visibleToUser=true] >3 [vid="tv_content"]',
+        },
+      ],
+    },
+    {
+      name: '分段广告-xxxx・咨询服务',
+      key: 5,
+      desc: '关闭->点第一个选项',
+      enable: true,
+      quickFind: true,
+      rules: [
+        {
+          key: 500,
+          name: '点 x',
+          activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
+          matches:
+            '[text="· 咨询服务"][visibleToUser=true] <2 * + * > ImageView',
+        },
+        {
+          key: 525,
+          name: '点第一个选项[525]',
+          preKeys: [500],
+          matches:
+            '[vid="recycler_view"] > [index=0][visibleToUser=true] >3 [vid="tv_content"]',
         },
       ],
     },
