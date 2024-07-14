@@ -61,7 +61,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 200,
-          name: '点 x',
+          name: '点 x[200]',
           activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
           matches: '[text^="广告 · "][visibleToUser=true] < * + * > ImageView',
         },
@@ -75,7 +75,7 @@ export default defineGkdApp({
       ],
     },
     {
-      name: '分段广告-xxx的广告', // xxxx 的广告
+      name: '分段广告-xxx 的广告', // xxxx 的广告
       key: 3,
       desc: '关闭->点第一个选项',
       enable: true,
@@ -120,7 +120,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 400,
-          name: '点 x',
+          name: '点 x[400]',
           activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
           matches:
             '[text="· 商品介绍"][visibleToUser=true] <2 * + * > ImageView',
@@ -143,7 +143,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 500,
-          name: '点 x',
+          name: '点 x[500]',
           activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
           matches:
             '[text="· 咨询服务"][visibleToUser=true] <2 * + * > ImageView',
@@ -154,6 +154,29 @@ export default defineGkdApp({
           preKeys: [500],
           matches:
             '[vid="recycler_view"] > [index=0][visibleToUser=true] >3 [vid="tv_content"]',
+        },
+      ],
+    },
+    {
+      name: '局部广告-xxxx 的广告',
+      key: 6,
+      desc: '关闭',
+      enable: true,
+      quickFind: true,
+      rules: [
+        {
+          key: 600,
+          name: '点 x[600]',
+          activityIds:
+            'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
+          matches:
+            '[text$=" 的广告"][visibleToUser=true] +3 @ImageView - * >3 [text="立即下载"]',
+        },
+        {
+          key: 601,
+          name: '点 x[601]',
+          activityIds: 'com.huawei.android.launcher.unihome.UniHomeLauncher',
+          matches: '[text$=" 的广告"][visibleToUser=true] +2 @ImageView',
         },
       ],
     },
