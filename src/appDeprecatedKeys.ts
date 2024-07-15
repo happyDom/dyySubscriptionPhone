@@ -73,4 +73,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: 'vivaldi浏览器',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.android.permissioncontroller',
+    name: '权限控制器',
+    deprecatedKeys: [],
+  },
 ];
