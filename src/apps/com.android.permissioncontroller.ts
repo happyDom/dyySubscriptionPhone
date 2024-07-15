@@ -17,6 +17,7 @@ export default defineGkdApp({
         {
           key: 0,
           name: '禁止[0]',
+          snapshotUrls: 'https://i.gkd.li/i/16236205',
           matches:
             '@Button[vid="permission_deny_button"][text="禁止"] < * < * - ScrollView >n TextView[text$="发送通知？"]',
         },
