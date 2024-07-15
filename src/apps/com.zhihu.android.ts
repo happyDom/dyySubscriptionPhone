@@ -160,7 +160,7 @@ export default defineGkdApp({
     {
       name: '局部广告-xxxx 的广告',
       key: 6,
-      desc: '关闭',
+      desc: '点 x',
       enable: true,
       quickFind: true,
       rules: [
