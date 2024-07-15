@@ -175,8 +175,10 @@ export default defineGkdApp({
         {
           key: 601,
           name: '点 x[601]',
-          activityIds: 'com.huawei.android.launcher.unihome.UniHomeLauncher',
-          matches: '[text$=" 的广告"][visibleToUser=true] +2 @ImageView',
+          activityIds:
+            'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
+          matches:
+            '[text$=" 的广告"][visibleToUser=true] +(2,3) @ImageView[clickable=true]',
         },
       ],
     },
