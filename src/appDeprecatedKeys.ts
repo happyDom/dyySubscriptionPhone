@@ -78,4 +78,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '权限控制器',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.cainiao.wireless',
+    name: '菜鸟',
+    deprecatedKeys: [],
+  },
 ];
