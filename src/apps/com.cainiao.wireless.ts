@@ -18,7 +18,7 @@ export default defineGkdApp({
           key: 0,
           name: '点 x[0]',
           matches:
-            '[text="重要物流信息无法通知你"][visibleToUser=true] +3 FrameLayout[clickable=true] + ImageView',
+            '[text="重要物流信息无法通知你"] +3 FrameLayout[clickable=true][desc=null][vid=null] + ImageView',
         },
       ],
     },
@@ -35,7 +35,7 @@ export default defineGkdApp({
           key: 100,
           name: '点 x[100]',
           matches:
-            'TextView[text$="海量好礼"] +2 FrameLayout[clickable=true] + ImageView',
+            'TextView[text$="海量好礼"] +2 FrameLayout[clickable=true][desc=null][vid=null] + ImageView',
         },
       ],
     },
