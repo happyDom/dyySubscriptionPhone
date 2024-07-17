@@ -78,7 +78,7 @@ export default defineGkdApp({
           name: '不感兴趣[226]',
           preKeys: [200],
           matches:
-            'FrameLayout[depth=0] >(-n+10) TextView[text="内容过时"][visibleToUser=true]',
+            'FrameLayout[depth=0] >(-n+10) TextView[text="不感兴趣"][visibleToUser=true]',
         },
       ],
     },
@@ -200,6 +200,27 @@ export default defineGkdApp({
           name: '不感兴趣[625]',
           activityIds: 'com.zhihu.android.ContentActivity',
           matches: '[text$="不感兴趣"][visibleToUser=true]',
+        },
+      ],
+    },
+    {
+      name: '更新提示-版本内测',
+      key: 7,
+      desc: '不再提醒 -> 取消',
+      enable: true,
+      quickFind: true,
+      rules: [
+        {
+          key: 700,
+          name: '勾选不再提醒[700]',
+          matches:
+            '[text*="版本内测"] <<(-n+5) FrameLayout + * >3 [text="不再提醒"]',
+        },
+        {
+          key: 725,
+          name: '取消[725]',
+          preKeys: 700,
+          matches: 'Button[text="取消"]',
         },
       ],
     },
