@@ -235,7 +235,22 @@ export default defineGkdApp({
           key: 800,
           name: '点GIF图标[800]',
           matches:
-            'ImageView[vid="image_normal"][clickable=true] + * [vid="text_gif"][text="GIF"][visibleToUser=true][bottom<2000]',
+            'ImageView[vid="image_normal"][clickable=true] + [bottom<2000] > [vid="text_gif"][text="GIF"][visibleToUser=true]',
+        },
+      ],
+    },
+    {
+      name: '功能类-查看原图',
+      key: 9,
+      desc: '点 查看原图',
+      enable: true,
+      quickFind: true,
+      activityIds: 'com.zhihu.android.picture.activity.ImagesViewerActivity',
+      rules: [
+        {
+          key: 900,
+          name: '查看原图[900]',
+          matches: '[text="查看原图"][clickable=true][visibleToUser=true]',
         },
       ],
     },
