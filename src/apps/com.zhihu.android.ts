@@ -69,8 +69,16 @@ export default defineGkdApp({
           key: 225,
           name: '点第一个选项[225]',
           preKeys: [200],
+          actionCdKey: 226,
           matches:
             '[vid="recycler_view"] > [index=0][visibleToUser=true] >3 [vid="tv_content"]',
+        },
+        {
+          key: 226,
+          name: '不感兴趣[226]',
+          preKeys: [200],
+          matches:
+            'FrameLayout[depth=0] >(-n+10) TextView[text="内容过时"][visibleToUser=true]',
         },
       ],
     },
