@@ -78,7 +78,7 @@ export default defineGkdApp({
           name: '不感兴趣[226]',
           preKeys: [200],
           matches:
-            '[parent=null] >(-n+10) TextView[text="不感兴趣"][visibleToUser=true]',
+            'FrameLayout[depth=0] >(-n+10) TextView[text="不感兴趣"][visibleToUser=true]',
         },
       ],
     },
