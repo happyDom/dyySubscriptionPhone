@@ -234,8 +234,9 @@ export default defineGkdApp({
         {
           key: 800,
           name: '点GIF图标[800]',
+          action: 'clickNode',
           matches:
-            'ImageView[vid="image_normal"][clickable=true] + [bottom<2000] > [vid="text_gif"][text="GIF"][visibleToUser=true]',
+            '@ImageView[vid="image_normal"][clickable=true] + * > [vid="text_gif"][text="GIF"][visibleToUser=true]',
         },
       ],
     },
