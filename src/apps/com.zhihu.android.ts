@@ -224,5 +224,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      name: '功能类-自动播放GIF',
+      key: 8,
+      desc: '点GIF图标',
+      enable: true,
+      quickFind: true,
+      rules: [
+        {
+          key: 800,
+          name: '点GIF图标[800]',
+          matches:
+            'ImageView[vid="image_normal"][clickable=true] + * [vid="text_gif"][text="GIF"][visibleToUser=true][bottom<2000]',
+        },
+      ],
+    },
   ],
 });
