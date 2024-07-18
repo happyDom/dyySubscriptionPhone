@@ -7,7 +7,7 @@ export default defineGkdApp({
   groups: [
     {
       key: 0,
-      name: '通知提示-重要物流信息通知',
+      name: '权限提示-新增权限异常警告',
       desc: '点 收起(向下箭头)',
       enable: true,
       quickFind: true,
