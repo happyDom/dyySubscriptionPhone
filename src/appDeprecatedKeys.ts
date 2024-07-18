@@ -88,4 +88,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '华为快应用',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.huawei.appmarket',
+    name: '华为应用市场',
+    deprecatedKeys: [],
+  },
 ];
