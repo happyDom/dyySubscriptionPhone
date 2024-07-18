@@ -255,5 +255,21 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      name: '功能类-感谢您的创作',
+      key: 10,
+      desc: '点 完成',
+      enable: true,
+      quickFind: true,
+      activityIds: 'com.zhihu.android.panel.ng.ui.PublishFeedBackActivity',
+      rules: [
+        {
+          key: 1000,
+          name: '完成[1000]',
+          matches:
+            '@TextView[text="完成"] + * >3 [text^="感谢你的第"][text$="篇创作！"]',
+        },
+      ],
+    },
   ],
 });
