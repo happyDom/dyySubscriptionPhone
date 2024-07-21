@@ -98,4 +98,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: 'HMS Core',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.sankuai.meituan',
+    name: '美团',
+    deprecatedKeys: [],
+  },
 ];
