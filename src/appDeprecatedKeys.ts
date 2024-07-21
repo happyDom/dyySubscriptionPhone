@@ -93,4 +93,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '华为应用市场',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.huawei.hwid',
+    name: 'HMS Core',
+    deprecatedKeys: [],
+  },
 ];
