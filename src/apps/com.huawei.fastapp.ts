@@ -20,5 +20,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 1,
+      name: '功能类-添加该游戏至桌面',
+      desc: '点 退出',
+      enable: true,
+      quickFind: true,
+      rules: [
+        {
+          key: 100,
+          name: '点 退出[100]',
+          matches:
+            '@Button[text="退出"] < * < * - * [text="添加该游戏至桌面？"]',
+        },
+      ],
+    },
   ],
 });
