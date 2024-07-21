@@ -1,6 +1,6 @@
 import { defineGkdApp } from '@gkd-kit/define';
 
-// 菜鸟
+// 华为应用市场
 export default defineGkdApp({
   id: 'com.huawei.appmarket',
   name: '华为应用市场[未安装]',

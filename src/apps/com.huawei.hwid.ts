@@ -1,6 +1,6 @@
 import { defineGkdApp } from '@gkd-kit/define';
 
-// 菜鸟
+// HMS Core
 export default defineGkdApp({
   id: 'com.huawei.hwid',
   name: 'HMS Core[未安装]',

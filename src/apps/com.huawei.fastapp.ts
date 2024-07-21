@@ -1,6 +1,6 @@
 import { defineGkdApp } from '@gkd-kit/define';
 
-// 菜鸟
+// 华为快应用
 export default defineGkdApp({
   id: 'com.huawei.fastapp',
   name: '华为快应用[未安装]',
