@@ -58,5 +58,21 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 3,
+      name: '全屏广告-限时消费券',
+      desc: '点 x',
+      enable: true,
+      quickFind: true,
+      activityIds: 'com.kuaishou.merchant.pagedy.page.MerchantEraActivity',
+      rules: [
+        {
+          key: 300,
+          name: '点 x[300]',
+          matches:
+            '[text="限时消费券"] <n * + ViewGroup @ViewGroup[clickable=true] ImageView',
+        },
+      ],
+    },
   ],
 });
