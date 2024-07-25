@@ -271,5 +271,22 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      name: '局部广告-无广告字样卡片',
+      key: 11,
+      desc: '点 x',
+      enable: true,
+      quickFind: true,
+      activityIds:
+        'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
+      rules: [
+        {
+          key: 1100,
+          name: '点 x[1100]',
+          matches:
+            'FrameLayout ViewGroup[childCount=4] ImageView + TextView[text.length>1] + TextView[text=null] + ImageView[clickable=true]',
+        },
+      ],
+    },
   ],
 });
