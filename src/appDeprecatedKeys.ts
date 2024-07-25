@@ -138,4 +138,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '画画板',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.outfit7.mytalkingtom2.huawei',
+    name: '我的汤姆猫2',
+    deprecatedKeys: [],
+  },
 ];
