@@ -148,4 +148,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '救救狗狗',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.sinyee.babybus.recommendapp',
+    name: '宝宝巴士',
+    deprecatedKeys: [],
+  },
 ];
