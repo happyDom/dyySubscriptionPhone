@@ -108,4 +108,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '腾讯qq',
     deprecatedKeys: [],
   },
+  {
+    id: 'cn.dictcn.android.digitize.sw_gjcydcd_10011',
+    name: '成语大词典',
+    deprecatedKeys: [],
+  },
 ];
