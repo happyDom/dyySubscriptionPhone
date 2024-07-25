@@ -143,4 +143,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '我的汤姆猫2',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.sihai.jiujiuxiaogou.huawei',
+    name: '救救狗狗',
+    deprecatedKeys: [],
+  },
 ];
