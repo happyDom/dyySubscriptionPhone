@@ -118,4 +118,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '宝宝巴士科学',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.android.packageinstaller',
+    name: '应用安装器',
+    deprecatedKeys: [],
+  },
 ];
