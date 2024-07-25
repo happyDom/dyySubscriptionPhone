@@ -128,4 +128,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '火柴人暴击3',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.huawei.intelligent',
+    name: '华为智慧助手',
+    deprecatedKeys: [],
+  },
 ];
