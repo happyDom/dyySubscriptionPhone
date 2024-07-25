@@ -46,8 +46,8 @@ export default defineGkdGlobalGroups([
   },
   {
     key: 1,
-    name: '更新提示',
-    desc: '跳过 or 拒绝这个版本',
+    name: '更新提示-跳过测试版',
+    desc: '跳过测试版本 or 内测版本',
     order: UPDATE_PROMPT_ORDER,
     matchTime: 10000,
     actionMaximum: 1,
