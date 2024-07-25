@@ -123,4 +123,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '应用安装器',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.gzsd.hcrbjthree.huawei',
+    name: '火柴人暴击3',
+    deprecatedKeys: [],
+  },
 ];
