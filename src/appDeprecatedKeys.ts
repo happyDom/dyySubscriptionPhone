@@ -153,4 +153,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '宝宝巴士',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.tencent.qqlive',
+    name: '腾讯视频',
+    deprecatedKeys: [],
+  },
 ];
