@@ -133,4 +133,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '华为智慧助手',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.liubowang.drawingboard',
+    name: '画画板',
+    deprecatedKeys: [],
+  },
 ];
