@@ -113,4 +113,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '成语大词典',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.ailiyong.world.course',
+    name: '宝宝巴士科学',
+    deprecatedKeys: [],
+  },
 ];
