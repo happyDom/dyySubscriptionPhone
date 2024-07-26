@@ -158,4 +158,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '腾讯视频',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.android.mediacenter',
+    name: '华为音乐',
+    deprecatedKeys: [],
+  },
 ];
