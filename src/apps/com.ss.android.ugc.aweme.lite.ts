@@ -95,7 +95,7 @@ export default defineGkdApp({
         {
           key: 500,
           name: '点 x[500]',
-          matches: '@[vid="i3l"][desc="关闭"] - [text="及时获得评论回复提醒"]',
+          matches: '@[desc="关闭"] - [text="及时获得评论回复提醒"]',
         },
       ],
     },
