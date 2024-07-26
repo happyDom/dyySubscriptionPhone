@@ -23,7 +23,7 @@ export default defineGkdApp({
     {
       key: 1,
       name: '功能类-自动查看新消息',
-      desc: '依次点击 新增关注->评论转发',
+      desc: '关注->收藏->赞同->评论',
       enable: true,
       quickFind: true,
       actionDelay: 450,
@@ -285,6 +285,22 @@ export default defineGkdApp({
           name: '点 x[1100]',
           matches:
             'FrameLayout ViewGroup[childCount=4] ImageView + TextView[text.length>1] + TextView[text=null] + ImageView[clickable=true]',
+        },
+      ],
+    },
+    {
+      name: '功能类-评论氛围',
+      key: 12,
+      desc: '点 x',
+      enable: true,
+      quickFind: true,
+      activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
+      rules: [
+        {
+          key: 1200,
+          name: '点 x[1200]',
+          matches:
+            '@UIImage[text="关闭,按钮"] +n [text*="评论氛围"][text*="是否满意？"]',
         },
       ],
     },
