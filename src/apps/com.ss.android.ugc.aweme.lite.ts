@@ -197,18 +197,17 @@ export default defineGkdApp({
       name: '功能类-自动看广告领金币',
       desc: '自动看广告领金币',
       enable: true,
+      quickFind: true,
       activityIds: 'com.ss.android.excitingvideo.ExcitingVideoActivity',
       rules: [
         {
           key: 900,
           name: '领取成功[900]',
-          quickFind: true,
           matches: 'FlattenUIText[text="广告"] +(5-n) UIView[text^="领取成功"]',
         },
         {
           key: 925,
           name: '领取成功[925]',
-          quickFind: true,
           preKeys: [900],
           matches:
             '@FlattenUIText[text="领取奖励"] +2 FlattenUIText[text="坚持退出"]',
@@ -219,7 +218,7 @@ export default defineGkdApp({
           actionCdKey: 925,
           preKeys: [900],
           activityIds: [],
-          matches: 'UIView[text="评价并收下金币"]',
+          matches: 'FlattenUIText[text="评价并收下金币"]',
         },
       ],
     },
