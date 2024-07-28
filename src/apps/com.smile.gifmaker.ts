@@ -149,7 +149,6 @@ export default defineGkdApp({
         {
           key: 700,
           name: '领取奖励[700]',
-          actionDelay: 1000,
           actionCd: 3000,
           matches: 'Button[text="领取奖励"]',
         },
