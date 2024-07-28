@@ -23,18 +23,21 @@ export default defineGkdApp({
     },
     {
       key: 1,
-      name: '功能类-动态提醒弹窗',
+      name: '权限提示-通知权限',
       desc: '暂不开启',
-      actionMaximum: 1,
       enable: true,
       quickFind: true,
-      activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
+      actionCdKey: 100,
       rules: [
         {
           key: 100,
           name: '暂不开启[100]',
-          matches:
-            '[vid="ky_"][text="及时获得动态提醒"] +n [vid="i2e"][text="暂不开启"]',
+          matches: '[text="及时获得动态提醒"] +(7-n) [text="暂不开启"]',
+        },
+        {
+          key: 101,
+          name: '暂不开启[101]',
+          matches: '[text*="开启通知权限"] +(7-n) [text="暂不开启"]',
         },
       ],
     },
@@ -104,7 +107,6 @@ export default defineGkdApp({
       name: '全屏广告-预约领金币',
       desc: '点 x',
       enable: true,
-      quickFind: true,
       activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
       rules: [
         {
