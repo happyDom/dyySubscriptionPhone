@@ -311,5 +311,19 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      name: '局部广告-带广告标记卡片',
+      key: 13,
+      desc: '点 x',
+      enable: true,
+      quickFind: true,
+      rules: [
+        {
+          key: 1300,
+          name: '点 x[1300]',
+          matches: '[vid="tv_ad_tag"] + ImageView[vid="img_close_focus"]',
+        },
+      ],
+    },
   ],
 });
