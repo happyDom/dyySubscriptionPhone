@@ -16,8 +16,8 @@ export default defineGkdApp({
         {
           key: 0,
           name: '展开[0]',
-          actionDelay: 330,
-          matches: '@FrameLayout > [text="展开"][visibleToUser=false]',
+          actionCdKey: 3000,
+          matches: '@FrameLayout[visibleToUser=true] > [text="展开"]',
         },
       ],
     },
