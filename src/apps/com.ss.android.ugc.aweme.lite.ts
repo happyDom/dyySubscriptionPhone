@@ -130,28 +130,65 @@ export default defineGkdApp({
         {
           key: 800,
           name: '开宝箱[800]',
-          matches: 'CustomUiImage +4 UIView',
+          actionCd: 5000,
+          matches: 'CustomUiImage +4 UIView + *',
         },
         {
           key: 801,
           name: '开宝箱[801]',
-          matches:
-            'View[childCount=4] > @View[clickable=true] > TextView[text="开宝箱"]',
+          actionCdKey: 800,
+          matches: 'FlattenUIImage +4 @UIView + *',
         },
         {
-          key: 802,
-          name: '返回[802]',
-          actionCdKey: 801,
+          key: 810,
+          name: '返回[810]',
+          actionCd: 3000,
           quickFind: true,
-          matches: 'View[text*="再等一下" || text*="明天再来"]',
+          matches:
+            '[text^="再等一下" || text*="后可开 再等一下" || text*="已获得 明天再来"]',
           action: 'back',
+        },
+        {
+          key: 811,
+          name: '返回[811]',
+          actionCdKey: 810,
+          matches: '[text*="幸运数字"] + * TextView[text="赠送"]',
+          action: 'back',
+        },
+        {
+          key: 812,
+          name: '开宝箱[812]',
+          actionCdKey: 810,
+          matches:
+            'View[childCount=4 || childCount=5] >2 TextView[text="开宝箱"]',
         },
         {
           key: 825,
           name: '赠送额外获得[825]',
-          preKeys: [801],
-          matches:
-            'View[clickable=true] >2 [text="赠送额外获得+" || text="收下金币"]',
+          preKeys: [812],
+          quickFind: true,
+          matches: '[text="赠送额外获得+" || text="收下金币"]',
+        },
+        {
+          key: 850,
+          name: '换钻石并送出[850]',
+          preKeys: [825],
+          quickFind: true,
+          matches: '@ImageView + [text="换钻石送礼物"]',
+        },
+        {
+          key: 851,
+          name: '去Ta直播间[851]',
+          preKeys: [825],
+          actionCdKey: 850,
+          matches: '[text="去Ta直播间"] +n [text="去Ta直播间"]',
+        },
+        {
+          key: 875,
+          name: '返回[875]',
+          preKeys: [850],
+          matches: '[depth=0]',
+          action: 'back',
         },
       ],
     },
@@ -160,17 +197,18 @@ export default defineGkdApp({
       name: '功能类-自动看广告领金币',
       desc: '自动看广告领金币',
       enable: true,
-      quickFind: true,
       activityIds: 'com.ss.android.excitingvideo.ExcitingVideoActivity',
       rules: [
         {
           key: 900,
           name: '领取成功[900]',
+          quickFind: true,
           matches: 'FlattenUIText[text="广告"] +(5-n) UIView[text^="领取成功"]',
         },
         {
           key: 925,
           name: '领取成功[925]',
+          quickFind: true,
           preKeys: [900],
           matches:
             '@FlattenUIText[text="领取奖励"] +2 FlattenUIText[text="坚持退出"]',
@@ -180,11 +218,7 @@ export default defineGkdApp({
           name: '领取成功[926]',
           actionCdKey: 925,
           preKeys: [900],
-          quickFind: false,
-          activityIds: [
-            'com.bytedance.ies.ugc.aweme.photos.detail.flow.page.FlowPageActivity',
-            'com.ss.android.ugc.aweme.main.MainActivity',
-          ],
+          activityIds: [],
           matches: 'UIView[text="评价并收下金币"]',
         },
       ],
