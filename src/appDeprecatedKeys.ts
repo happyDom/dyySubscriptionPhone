@@ -163,4 +163,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '华为音乐',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.autonavi.minimap',
+    name: '高德地图',
+    deprecatedKeys: [],
+  },
 ];
