@@ -38,8 +38,8 @@ export default defineGkdApp({
     },
     {
       key: 2,
-      name: '功能类-发现新朋友',
-      desc: '点 x, 然后减少推荐',
+      name: '功能类-朋友推荐/发现新朋友',
+      desc: '点 x',
       enable: true,
       quickFind: true,
       activityIds: 'com.yxcorp.gifshow.HomeActivity',
@@ -49,6 +49,12 @@ export default defineGkdApp({
           name: '点 x[200]',
           matches:
             '[text="发现新朋友"] + * >2 LinearLayout[index=0] [vid="close_btn"]',
+        },
+        {
+          key: 201,
+          name: '点 x[201]',
+          actionCdKey: 200,
+          matches: '[text="朋友推荐"] + [vid="close_btn"]',
         },
         {
           key: 225,
