@@ -112,6 +112,13 @@ export default defineGkdApp({
             '[text$="的广告"][visibleToUser=true] <3 * +4 * ImageView[visibleToUser=true]',
         },
         {
+          key: 303,
+          name: '点 x[303]',
+          activityIds:
+            'com.zhihu.android.mixshortcontainer.MixShortContainerActivity',
+          matches: '@Image[clickable=true] + TextView[text$="的广告"]',
+        },
+        {
           key: 325,
           name: '不感兴趣[325]',
           preKeys: [300, 301, 302],
