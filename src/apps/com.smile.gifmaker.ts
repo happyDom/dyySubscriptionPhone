@@ -122,5 +122,23 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 6,
+      name: '功能类-领奍一只',
+      desc: '点 x',
+      enable: true,
+      quickFind: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      activityIds: 'com.yxcorp.gifshow.webview.KwaiYodaWebViewActivity',
+      rules: [
+        {
+          key: 600,
+          name: '点 x[600]',
+          matches:
+            '@Image[clickable=true] < View + View Button[text="领养一只"]',
+        },
+      ],
+    },
   ],
 });
