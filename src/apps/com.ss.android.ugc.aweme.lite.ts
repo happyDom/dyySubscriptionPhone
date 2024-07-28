@@ -58,31 +58,21 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '局部广告-物品推荐',
-      desc: '点 不感兴趣',
+      name: '局部广告-推荐弹窗',
+      desc: '不感兴趣',
       enable: true,
       quickFind: true,
+      actionCdKey: 300,
       activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
       rules: [
         {
           key: 300,
           name: '不感兴趣[300]',
-          actionDelay: 330,
           matches: '@FlattenUIText[text="不感兴趣"]',
         },
-      ],
-    },
-    {
-      key: 4,
-      name: '功能类-推荐关注按钮',
-      desc: '点 不感兴趣',
-      enable: true,
-      quickFind: true,
-      activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
-      rules: [
         {
-          key: 400,
-          name: '不感兴趣[400]',
+          key: 301,
+          name: '不感兴趣[301]',
           matches: '[text="不感兴趣"][visibleToUser=true][clickable=true]',
         },
       ],
@@ -162,6 +152,40 @@ export default defineGkdApp({
           preKeys: [801],
           matches:
             'View[clickable=true] >2 [text="赠送额外获得+" || text="收下金币"]',
+        },
+      ],
+    },
+    {
+      key: 9,
+      name: '功能类-自动看广告领金币',
+      desc: '自动看广告领金币',
+      enable: true,
+      quickFind: true,
+      activityIds: 'com.ss.android.excitingvideo.ExcitingVideoActivity',
+      rules: [
+        {
+          key: 900,
+          name: '领取成功[900]',
+          matches: 'FlattenUIText[text="广告"] +(5-n) UIView[text^="领取成功"]',
+        },
+        {
+          key: 925,
+          name: '领取成功[925]',
+          preKeys: [900],
+          matches:
+            '@FlattenUIText[text="领取奖励"] +2 FlattenUIText[text="坚持退出"]',
+        },
+        {
+          key: 926,
+          name: '领取成功[926]',
+          actionCdKey: 925,
+          preKeys: [900],
+          quickFind: false,
+          activityIds: [
+            'com.bytedance.ies.ugc.aweme.photos.detail.flow.page.FlowPageActivity',
+            'com.ss.android.ugc.aweme.main.MainActivity',
+          ],
+          matches: 'UIView[text="评价并收下金币"]',
         },
       ],
     },
