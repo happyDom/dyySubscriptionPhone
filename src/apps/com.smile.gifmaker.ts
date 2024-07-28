@@ -95,34 +95,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 5,
-      name: '功能类-自动签到',
-      desc: '立即签到 -> 立即签到 -> 返回',
-      enable: true,
-      quickFind: true,
-      activityIds: 'com.yxcorp.gifshow.webview.KwaiYodaWebViewActivity',
-      rules: [
-        {
-          key: 500,
-          name: '立即签到[500]',
-          matches: 'Button[text="立即签到"]',
-        },
-        {
-          key: 525,
-          name: '立即签到[525]',
-          preKeys: [500],
-          matches: '[text="今日签到可领"] +n * Button[text="立即签到"]',
-        },
-        {
-          key: 550,
-          name: '返回[550]',
-          preKeys: [525],
-          matches: '[depth=0]',
-          action: 'back',
-        },
-      ],
-    },
-    {
       key: 6,
       name: '功能类-领奍一只',
       desc: '点 x',
@@ -137,28 +109,6 @@ export default defineGkdApp({
           name: '点 x[600]',
           matches:
             '@Image[clickable=true] < View + View Button[text="领养一只"]',
-        },
-      ],
-    },
-    {
-      key: 7,
-      name: '功能类-自动领取观看奖励',
-      desc: '领取奖励->继续赚钱',
-      enable: true,
-      quickFind: true,
-      activityIds: 'com.yxcorp.gifshow.webview.KwaiYodaWebViewActivity',
-      rules: [
-        {
-          key: 700,
-          name: '领取奖励[700]',
-          actionCd: 5000,
-          matches: 'Button[text="领取奖励"]',
-        },
-        {
-          key: 725,
-          name: '继续赚钱[725]',
-          preKeys: [700],
-          matches: 'Button[text="继续赚钱"]',
         },
       ],
     },
