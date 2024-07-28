@@ -312,7 +312,7 @@ export default defineGkdApp({
       ],
     },
     {
-      name: '局部广告-带广告标记卡片',
+      name: '局部广告-顶部广告卡片',
       key: 13,
       desc: '点 x',
       enable: true,
