@@ -94,5 +94,33 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 5,
+      name: '功能类-自动签到',
+      desc: '立即签到 -> 立即签到 -> 返回',
+      enable: true,
+      quickFind: true,
+      activityIds: 'com.yxcorp.gifshow.webview.KwaiYodaWebViewActivity',
+      rules: [
+        {
+          key: 500,
+          name: '立即签到[500]',
+          matches: 'Button[text="立即签到"]',
+        },
+        {
+          key: 525,
+          name: '立即签到[525]',
+          preKeys: [500],
+          matches: '[text="今日签到可领"] +n * Button[text="立即签到"]',
+        },
+        {
+          key: 550,
+          name: '返回[550]',
+          preKeys: [525],
+          matches: '[depth=0]',
+          action: 'back',
+        },
+      ],
+    },
   ],
 });
