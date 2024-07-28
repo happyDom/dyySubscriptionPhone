@@ -80,5 +80,19 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 4,
+      name: '功能类-我知道了',
+      desc: '点 我知道了',
+      enable: true,
+      quickFind: true,
+      rules: [
+        {
+          key: 400,
+          name: '我知道了[400]',
+          matches: 'Button[text="我知道了"]',
+        },
+      ],
+    },
   ],
 });
