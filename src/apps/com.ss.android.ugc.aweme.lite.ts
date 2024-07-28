@@ -58,7 +58,7 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '局部广告-好物推荐',
+      name: '局部广告-物品推荐',
       desc: '点 不感兴趣',
       enable: true,
       quickFind: true,
@@ -68,7 +68,7 @@ export default defineGkdApp({
           key: 300,
           name: '不感兴趣[300]',
           actionDelay: 330,
-          matches: '@FlattenUIText[text="不感兴趣"] + [text="查看更多好物"]',
+          matches: '@FlattenUIText[text="不感兴趣"]',
         },
       ],
     },
@@ -113,6 +113,20 @@ export default defineGkdApp({
           key: 600,
           name: '点 x[600]',
           matches: 'FlattenUIImage + UIView[clickable=true]',
+        },
+      ],
+    },
+    {
+      key: 7,
+      name: '全屏广告-恭喜获得金币',
+      desc: '点 x',
+      enable: true,
+      activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
+      rules: [
+        {
+          key: 700,
+          name: '点 x[700]',
+          matches: '[vid="at-"] >3 View[clickable=true][childCount=0]',
         },
       ],
     },
