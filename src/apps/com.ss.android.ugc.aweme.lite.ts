@@ -130,5 +130,40 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 8,
+      name: '功能类-直播间金币奖励',
+      desc: '自动开宝箱领金币',
+      enable: true,
+      activityIds: 'com.ss.android.ugc.aweme.live.LivePlayActivity',
+      rules: [
+        {
+          key: 800,
+          name: '开宝箱[800]',
+          matches: 'CustomUiImage +4 UIView',
+        },
+        {
+          key: 801,
+          name: '开宝箱[801]',
+          matches:
+            'View[childCount=4] > @View[clickable=true] > TextView[text="开宝箱"]',
+        },
+        {
+          key: 802,
+          name: '返回[802]',
+          actionCdKey: 801,
+          quickFind: true,
+          matches: 'View[text*="再等一下" || text*="明天再来"]',
+          action: 'back',
+        },
+        {
+          key: 825,
+          name: '赠送额外获得[825]',
+          preKeys: [801],
+          matches:
+            'View[clickable=true] >2 [text="赠送额外获得+" || text="收下金币"]',
+        },
+      ],
+    },
   ],
 });
