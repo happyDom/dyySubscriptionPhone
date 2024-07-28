@@ -321,7 +321,7 @@ export default defineGkdApp({
         {
           key: 1300,
           name: '点 x[1300]',
-          matches: '[vid="tv_ad_tag"] + ImageView[vid="img_close_focus"]',
+          matches: '[vid="ad_container"] ImageView[vid="img_close_focus"]',
         },
       ],
     },
