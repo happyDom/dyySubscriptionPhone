@@ -15,9 +15,9 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          name: '点 展开',
+          name: '展开[0]',
           actionDelay: 330,
-          matches: '[text="展开"][visibleToUser=true]',
+          matches: '@FrameLayout > [text="展开"][visibleToUser=false]',
         },
       ],
     },
