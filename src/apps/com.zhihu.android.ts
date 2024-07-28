@@ -92,13 +92,15 @@ export default defineGkdApp({
         {
           key: 300,
           name: '点 x[300]',
+          actionCd: 2000,
           activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
           matches:
-            '[text=" 的广告"][visibleToUser=true] <<4 * +3 * ImageView[visibleToUser=true]',
+            '[text=" 的广告"][visibleToUser=true] <<4 * +3 * >2 ImageView[visibleToUser=true]',
         },
         {
           key: 301,
           name: '点 x[301]',
+          actionCdKey: 300,
           activityIds:
             'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
           matches:
@@ -107,6 +109,7 @@ export default defineGkdApp({
         {
           key: 302,
           name: '点 x[302]',
+          actionCdKey: 300,
           activityIds: 'com.zhihu.android.ContentActivity',
           matches:
             '[text$="的广告"][visibleToUser=true] <3 * +4 * ImageView[visibleToUser=true]',
@@ -114,6 +117,7 @@ export default defineGkdApp({
         {
           key: 303,
           name: '点 x[303]',
+          actionCdKey: 300,
           activityIds:
             'com.zhihu.android.mixshortcontainer.MixShortContainerActivity',
           matches: '@Image[clickable=true] + TextView[text$="的广告"]',
