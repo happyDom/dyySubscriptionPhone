@@ -140,5 +140,27 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 7,
+      name: '功能类-自动领取观看奖励',
+      desc: '领取奖励->继续赚钱',
+      enable: true,
+      quickFind: true,
+      activityIds: 'com.yxcorp.gifshow.webview.KwaiYodaWebViewActivity',
+      rules: [
+        {
+          key: 700,
+          name: '领取奖励[700]',
+          actionCd: 5000,
+          matches: 'Button[text="领取奖励"]',
+        },
+        {
+          key: 725,
+          name: '继续赚钱[725]',
+          preKeys: [700],
+          matches: 'Button[text="继续赚钱"]',
+        },
+      ],
+    },
   ],
 });
