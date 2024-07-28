@@ -317,6 +317,7 @@ export default defineGkdApp({
       desc: '点 x',
       enable: true,
       quickFind: true,
+      activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
       rules: [
         {
           key: 1300,
