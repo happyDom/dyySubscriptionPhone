@@ -107,6 +107,12 @@ export default defineGkdApp({
           matches: 'Button[text="立即签到"]',
         },
         {
+          key: 501,
+          name: '立即签到[501]',
+          actionCdKey: 500,
+          matches: 'TextView[text="今日签到"]',
+        },
+        {
           key: 525,
           name: '立即签到[525]',
           preKeys: [500],
@@ -122,41 +128,39 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 6,
-      name: '功能类-领奍一只',
-      desc: '点 x',
-      enable: true,
-      quickFind: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      activityIds: 'com.yxcorp.gifshow.webview.KwaiYodaWebViewActivity',
-      rules: [
-        {
-          key: 600,
-          name: '点 x[600]',
-          matches:
-            '@Image[clickable=true] < View + View Button[text="领养一只"]',
-        },
-      ],
-    },
-    {
       key: 7,
-      name: '功能类-自动领取观看奖励',
-      desc: '领取奖励->继续赚钱',
+      name: '全屏广告-倒计时视频',
+      desc: '领取奖励',
       enable: true,
-      activityIds: 'com.yxcorp.gifshow.webview.KwaiYodaWebViewActivity',
       rules: [
         {
           key: 700,
           name: '领取奖励[700]',
           actionCd: 3000,
+          activityIds: 'com.yxcorp.gifshow.webview.KwaiYodaWebViewActivity',
           matches: 'Button[text="领取奖励"]',
         },
         {
+          key: 701,
+          name: '领取奖励[701]',
+          actionCdKey: 700,
+          activityIds:
+            'com.yxcorp.gifshow.ad.neo.video.award.AwardVideoPlayActivity',
+          matches: 'TextView[text="已成功领取奖励"]',
+        },
+        {
           key: 725,
-          name: '继续赚钱[725]',
-          preKeys: [700],
-          matches: 'Button[text="继续赚钱"]',
+          name: '领取/继续[725]',
+          preKeys: [700, 701],
+          actionCd: 3000,
+          matches: '[text="继续赚钱" || text="领取奖励"]',
+        },
+        {
+          key: 726,
+          name: '坚持退出[726]',
+          preKeys: [701],
+          actionCdKey: 725,
+          matches: '[text="坚持退出" || text="放弃奖励"]',
         },
       ],
     },
