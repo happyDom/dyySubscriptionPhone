@@ -164,5 +164,19 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 8,
+      name: '全屏广告-带跳过按钮',
+      desc: '点 跳过',
+      enable: true,
+      quickFind: true,
+      rules: [
+        {
+          key: 800,
+          name: '跳过[800]',
+          matches: '[text="跳过"][clickable=true]',
+        },
+      ],
+    },
   ],
 });
