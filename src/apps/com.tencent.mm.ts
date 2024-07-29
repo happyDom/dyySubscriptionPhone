@@ -123,5 +123,29 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 5,
+      name: '功能类-开红包',
+      desc: '自动打开红包',
+      enable: true,
+      quickFind: true,
+      rules: [
+        {
+          key: 500,
+          name: '点红包[500]',
+          activityIds: 'com.tencent.mm.ui.LauncherUI',
+          matches:
+            'ImageView[desc$="头像"] < * + * [text="微信红包"][visibleToUser=true] < * -2 * > [childCount=1]',
+        },
+        {
+          key: 525,
+          name: '开[525]',
+          actionCd: 2000,
+          preKeys: [500],
+          //activityIds: 'com.tencent.mm.plugin.luckymoney.ui.LuckyMoneyNotHookReceiveUI',
+          matches: 'Button[desc="开"]',
+        },
+      ],
+    },
   ],
 });
