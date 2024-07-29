@@ -72,5 +72,26 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 2,
+      name: '分段广告-朋友圈广告卡片',
+      desc: '广告->不感兴趣',
+      enable: true,
+      quickFind: true,
+      activityIds: 'com.tencent.mm.plugin.sns.ui.improve.ImproveSnsTimelineUI',
+      rules: [
+        {
+          key: 200,
+          name: '点 广告[200]',
+          matches: '@ImageView[clickable=true] - [text="广告"]',
+        },
+        {
+          key: 225,
+          name: '关闭广告[225]',
+          preKeys: [200],
+          matches: '[text="关闭广告"][clickable=true]',
+        },
+      ],
+    },
   ],
 });
