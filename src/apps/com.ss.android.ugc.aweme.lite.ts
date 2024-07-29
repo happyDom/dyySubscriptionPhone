@@ -58,7 +58,7 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '局部广告-推荐弹窗',
+      name: '全屏广告-推荐弹窗',
       desc: '不感兴趣',
       enable: true,
       quickFind: true,
@@ -102,7 +102,7 @@ export default defineGkdApp({
         {
           key: 600,
           name: '点 x[600]',
-          matches: 'FlattenUIImage + UIView[clickable=true]',
+          matches: 'FlattenUIImage + UIView[clickable=true][text.length=0]',
         },
       ],
     },
@@ -142,10 +142,10 @@ export default defineGkdApp({
         {
           key: 810,
           name: '返回[810]',
-          actionCd: 3000,
+          actionCd: 2000,
           quickFind: true,
           matches:
-            '[text^="再等一下" || text*="后可开 再等一下" || text*="已获得 明天再来"]',
+            '[text^="再等一下" || text*="后可开 再等一下" || text*="已获得 明天再来"][text.length>10]',
           action: 'back',
         },
         {
@@ -163,6 +163,13 @@ export default defineGkdApp({
             'View[childCount=4 || childCount=5] >2 TextView[text="开宝箱"]',
         },
         {
+          key: 813,
+          name: '返回[813]',
+          actionCdKey: 810,
+          matches: '[text="限时任务"] + * [text="去送礼"]',
+          action: 'back',
+        },
+        {
           key: 825,
           name: '赠送额外获得[825]',
           preKeys: [812],
@@ -171,7 +178,7 @@ export default defineGkdApp({
         },
         {
           key: 850,
-          name: '换钻石并送出[850]',
+          name: 'x掉 换钻石送礼物[850]',
           preKeys: [825],
           quickFind: true,
           matches: '@ImageView + [text="换钻石送礼物"]',
@@ -179,7 +186,7 @@ export default defineGkdApp({
         {
           key: 851,
           name: '去Ta直播间[851]',
-          preKeys: [825],
+          preKeys: [812, 825],
           actionCdKey: 850,
           matches: '[text="去Ta直播间"] +n [text="去Ta直播间"]',
         },
@@ -198,23 +205,24 @@ export default defineGkdApp({
       desc: '自动看广告领金币',
       enable: true,
       quickFind: true,
-      activityIds: 'com.ss.android.excitingvideo.ExcitingVideoActivity',
       rules: [
         {
           key: 900,
           name: '领取成功[900]',
+          actionCd: 3000,
+          activityIds: 'com.ss.android.excitingvideo.ExcitingVideoActivity',
           matches: 'FlattenUIText[text="广告"] +(5-n) UIView[text^="领取成功"]',
         },
         {
           key: 925,
-          name: '领取成功[925]',
+          name: '领取奖励/坚持退出[925]',
           preKeys: [900],
           matches:
-            '@FlattenUIText[text="领取奖励"] +2 FlattenUIText[text="坚持退出"]',
+            '@FlattenUIText[text="领取奖励"] +(3-n) FlattenUIText[text="坚持退出"]',
         },
         {
           key: 926,
-          name: '领取成功[926]',
+          name: '收下金币[926]',
           actionCdKey: 925,
           preKeys: [900],
           activityIds: [],
