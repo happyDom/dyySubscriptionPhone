@@ -93,5 +93,35 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 3,
+      name: '功能类-查看原图',
+      desc: '点 查看原图',
+      enable: true,
+      quickFind: true,
+      activityIds: 'com.tencent.mm.ui.chatting.gallery.ImageGalleryUI',
+      rules: [
+        {
+          key: 300,
+          name: '查看原图[300]',
+          matches: 'Button[text^="查看原图"]',
+        },
+      ],
+    },
+    {
+      key: 4,
+      name: '功能类-发送原图',
+      desc: '勾选 原图',
+      enable: true,
+      quickFind: true,
+      activityIds: 'com.tencent.mm.plugin.gallery.ui.AlbumPreviewUI',
+      rules: [
+        {
+          key: 300,
+          name: '勾选原图[400]',
+          matches: '@[desc="未选中,原图,复选框"] + [text="原图"]',
+        },
+      ],
+    },
   ],
 });
