@@ -10,35 +10,28 @@ export default defineGkdApp({
       name: '全屏广告-app倒计时',
       desc: '点 x',
       enable: true,
-      quickFind: true,
-      activityIds:
-        'com.huawei.openalliance.ad.ppskit.activity.InterstitialAdActivity',
       rules: [
         {
           key: 0,
           name: '点 x[0]',
+          quickFind: true,
+          activityIds:
+            'com.huawei.openalliance.ad.ppskit.activity.InterstitialAdActivity',
           matches: '[text="广告"] < * < * -n [text~="\\\\d+秒"] + ImageView',
         },
-      ],
-    },
-    {
-      key: 1,
-      name: '全屏广告-xx秒后领取奖励',
-      desc: '点 x',
-      enable: true,
-      activityIds:
-        'com.huawei.openalliance.ad.ppskit.activity.PPSRewardActivity',
-      rules: [
         {
-          key: 100,
-          name: '点 x[100]',
+          key: 1,
+          name: '点 x[1]',
+          actionCdKey: 0,
+          activityIds:
+            'com.huawei.openalliance.ad.ppskit.activity.PPSRewardActivity',
           matches: '[text~=".*\\\\d+ 秒后领取奖励"] + * ImageView',
         },
         {
-          key: 125,
-          name: '关闭广告[125]',
+          key: 25,
+          name: '关闭广告[25]',
           quickFind: true,
-          preKeys: [100],
+          preKeys: [1],
           matches: '@Button[text="关闭广告"] + Button[text="继续观看"]',
         },
       ],
