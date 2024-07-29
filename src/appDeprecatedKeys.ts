@@ -168,4 +168,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '高德地图',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.wedobest.shudu',
+    name: '数独',
+    deprecatedKeys: [],
+  },
 ];
