@@ -181,7 +181,8 @@ export default defineGkdApp({
           name: 'x掉 换钻石送礼物[850]',
           preKeys: [825],
           quickFind: true,
-          matches: '@ImageView + [text="换钻石送礼物"]',
+          matches: '[text="换钻石送礼物" || text="当前钻石不足"]',
+          action: 'back',
         },
         {
           key: 851,
