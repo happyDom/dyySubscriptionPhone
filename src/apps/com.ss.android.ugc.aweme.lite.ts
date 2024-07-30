@@ -96,7 +96,7 @@ export default defineGkdApp({
       key: 6,
       name: '全屏广告-预约领金币',
       desc: '点 x',
-      enable: true,
+      enable: false,
       activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
       rules: [
         {
@@ -210,7 +210,7 @@ export default defineGkdApp({
         {
           key: 900,
           name: '领取成功[900]',
-          actionCd: 3000,
+          actionCd: 1500,
           actionDelay: 750,
           activityIds: 'com.ss.android.excitingvideo.ExcitingVideoActivity',
           matches: 'UIView[text="领取成功，关闭，按钮"]',
@@ -229,6 +229,41 @@ export default defineGkdApp({
           preKeys: [900],
           matches: 'FlattenUIText[text="评价并收下金币"]',
           action: 'back',
+        },
+        {
+          key: 927,
+          name: '退出广告页面[927]',
+          actionCdKey: 925,
+          preKeys: [900],
+          matches: 'Button[vid="iv_back"][desc="返回"]',
+        },
+      ],
+    },
+    {
+      key: 10,
+      name: '功能类-逛街赚钱',
+      desc: '自动逛街，领金币',
+      enable: true,
+      activityIds: 'com.ss.android.ugc.aweme.bullet.ui.BulletContainerActivity',
+      rules: [
+        {
+          key: 1000,
+          name: '恭喜获得金币，收下金币，返回[1000]',
+          matches: '[text~="恭喜获得\\\\d+金币" || text="评价并收下金币"]',
+          action: 'back',
+        },
+        {
+          key: 1001,
+          name: '浏览xx秒可领xxx金币，返回[1001]',
+          actionCd: 4700,
+          matches: '[text~="浏览\\\\d+秒可领\\\\d+金币"]',
+          action: 'back',
+        },
+        {
+          key: 1010,
+          name: '继续观看[1010]',
+          preKeys: [1001],
+          matches: '[text~="再看\\\\d+秒.*"] +n FlattenUIText[text="继续观看"]',
         },
       ],
     },
