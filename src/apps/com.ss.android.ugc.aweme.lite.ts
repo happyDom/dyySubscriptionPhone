@@ -219,8 +219,7 @@ export default defineGkdApp({
           key: 925,
           name: '领取奖励/坚持退出[925]',
           preKeys: [900],
-          matches:
-            '@FlattenUIText[text="领取奖励"] +(3-n) FlattenUIText[text="坚持退出"]',
+          matches: '@[text="领取奖励"] +(3-n) [text="坚持退出"]',
         },
         {
           key: 926,
