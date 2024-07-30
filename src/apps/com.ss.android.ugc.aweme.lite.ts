@@ -249,7 +249,8 @@ export default defineGkdApp({
         {
           key: 1000,
           name: '恭喜获得金币，收下金币，返回[1000]',
-          matches: '[text~="恭喜获得\\\\d+金币" || text="评价并收下金币"]',
+          matches:
+            '[text~="恭喜获得\\\\d+金币" || text="评价并收下金币" || text$="可以再次领取奖励"]',
           action: 'back',
         },
         {
