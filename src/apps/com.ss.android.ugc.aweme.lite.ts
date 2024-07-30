@@ -181,8 +181,7 @@ export default defineGkdApp({
           name: 'x掉 换钻石送礼物[850]',
           preKeys: [825],
           quickFind: true,
-          matches: '[text="换钻石送礼物" || text="当前钻石不足"]',
-          action: 'back',
+          matches: '@ImageView +n Button[text="换钻石并送出"]',
         },
         {
           key: 851,
@@ -190,6 +189,14 @@ export default defineGkdApp({
           preKeys: [812, 825],
           actionCdKey: 850,
           matches: '[text="去Ta直播间"] +n [text="去Ta直播间"]',
+        },
+        {
+          key: 852,
+          name: '当前钻石不足，返回[852]',
+          preKeys: [825],
+          quickFind: true,
+          matches: '[text="当前钻石不足"]',
+          action: 'back',
         },
         {
           key: 875,
