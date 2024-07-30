@@ -173,4 +173,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '数独',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.huawei.android.launcher',
+    name: '华为桌面',
+    deprecatedKeys: [],
+  },
 ];
