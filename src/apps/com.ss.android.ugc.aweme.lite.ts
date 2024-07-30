@@ -263,7 +263,7 @@ export default defineGkdApp({
           key: 1010,
           name: '继续观看[1010]',
           preKeys: [1001],
-          matches: '[text~="再看\\\\d+秒.*"] +n FlattenUIText[text="继续观看"]',
+          matches: '@[text="继续观看"] + [text="坚持退出"]',
         },
       ],
     },
