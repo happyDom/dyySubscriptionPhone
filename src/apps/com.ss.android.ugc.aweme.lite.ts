@@ -252,24 +252,24 @@ export default defineGkdApp({
       activityIds: 'com.ss.android.ugc.aweme.bullet.ui.BulletContainerActivity',
       rules: [
         {
-          key: 1000,
-          name: '恭喜获得金币，收下金币，返回[1000]',
-          matches:
-            '[text~="恭喜获得\\\\d+金币" || text="评价并收下金币" || text$="可以再次领取奖励"]',
-          action: 'back',
-        },
-        {
-          key: 1001,
-          name: '浏览xx秒可领xxx金币，返回[1001]',
+          key: 1010,
+          name: '点 返回键[1010]',
           actionCd: 4700,
           matches: '[text~="浏览\\\\d+秒可领\\\\d+金币"]',
           action: 'back',
         },
         {
-          key: 1010,
-          name: '继续观看[1010]',
-          preKeys: [1001],
+          key: 1020,
+          name: '继续观看[1020]',
+          preKeys: [1010],
           matches: '[text~="再看\\\\d*秒可获得奖励"] +n @[text="继续观看"]',
+        },
+        {
+          key: 1030,
+          name: '点 返回键[1030]',
+          matches:
+            '[text~="恭喜获得\\\\d*金币" || text="评价并收下金币" || text$="可以再次领取奖励"]',
+          action: 'back',
         },
       ],
     },
