@@ -258,5 +258,74 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 11,
+      name: '功能类-自动读小说',
+      desc: '自动读小说，领金币',
+      enable: true,
+      activityIds: [
+        'com.ss.android.ugc.aweme.main.MainActivity',
+        'com.ss.android.excitingvideo.ExcitingVideoActivity',
+      ],
+      rules: [
+        {
+          key: 1110,
+          name: '阅读第一部小说[1110]',
+          matches: [
+            '[text="书架"] +2 [text="小说"] +2 [text="故事"]',
+            '@FlattenUIText[text="1"] + FlattenUIText[text.length>2]',
+          ],
+        },
+        {
+          key: 1120,
+          name: '左划开始阅读[1120]',
+          preKeys: 1110,
+          matches: 'TextView[text="左滑开始阅读"]',
+          position: { right: '-width * 0.5', top: 0 },
+        },
+        {
+          key: 1129,
+          name: '继续阅读[1129]',
+          actionCdKey: 1130,
+          activityIds: [],
+          matches: '[text="继续阅读下一页"]',
+        },
+        {
+          key: 1130,
+          name: '翻页[1130]',
+          actionCd: 4700,
+          activityIds: [],
+          matches: '[childCount=4] > ProgressBar + [text~="\\\\d+金币"]',
+          position: { left: 0, bottom: '-height * 5' },
+        },
+        {
+          key: 1140,
+          name: '返回[1140]',
+          matches: '[text^="恭喜获得"][text$="阅读奖励"]',
+          action: 'back',
+        },
+        {
+          key: 1150,
+          name: '点击金币条[1150]',
+          matches: '[childCount=5] > ProgressBar + [text~="\\\\d+金币"]',
+        },
+        {
+          key: 1160,
+          name: '领取金币[1160]',
+          matches: '[text="阅读赚金币"] +n [text="去领取"]',
+        },
+        {
+          key: 1170,
+          name: '看视频[1170]',
+          preKeys: 1160,
+          matches: '[text~="看视频再领 \\\\d+ 金币"]',
+        },
+        {
+          key: 1180,
+          name: '看小说[1180]',
+          matches: '[text="阅读赚金币"] +n [text="看小说"]',
+        },
+      ],
+    },
   ],
 });
