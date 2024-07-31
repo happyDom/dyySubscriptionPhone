@@ -93,20 +93,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 6,
-      name: '全屏广告-预约领金币',
-      desc: '点 x',
-      enable: false,
-      activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
-      rules: [
-        {
-          key: 600,
-          name: '点 x[600]',
-          matches: 'FlattenUIImage + UIView[clickable=true][text.length=0]',
-        },
-      ],
-    },
-    {
       key: 7,
       name: '全屏广告-恭喜获得金币',
       desc: '点 x',
