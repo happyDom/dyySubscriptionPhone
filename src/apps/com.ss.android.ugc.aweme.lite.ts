@@ -130,8 +130,7 @@ export default defineGkdApp({
           name: '返回[810]',
           actionCd: 2000,
           quickFind: true,
-          matches:
-            '[text^="再等一下" || text*="后可开 再等一下" || text*="已获得 明天再来"][text.length>10]',
+          matches: '[text$="明天再来"][text.length>10]',
           action: 'back',
         },
         {
