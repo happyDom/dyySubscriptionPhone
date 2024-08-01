@@ -130,7 +130,8 @@ export default defineGkdApp({
           name: '返回[810]',
           actionCd: 2000,
           quickFind: true,
-          matches: '[text$="明天再来"][text.length>10]',
+          matches:
+            '[text$="明天再来" || text*="后可开 再等一下"][text.length>10]',
           action: 'back',
         },
         {
@@ -217,7 +218,8 @@ export default defineGkdApp({
           key: 930,
           name: '领取奖励[930]',
           preKeys: [920],
-          matches: '@[text="领取奖励"] +(3-n) [text="坚持退出"]',
+          matches: '@[text="领取奖励"] +(5-n) [text="坚持退出"]',
+          action: 'clickCenter',
         },
         {
           key: 931,
@@ -240,14 +242,10 @@ export default defineGkdApp({
           key: 1010,
           name: '点 返回键[1010]',
           actionCd: 4700,
-          matches: '[text~="浏览\\\\d+秒可领\\\\d+金币"]',
-          action: 'back',
-        },
-        {
-          key: 1020,
-          name: '继续观看[1020]',
-          preKeys: [1010],
-          matches: '[text~="再看\\\\d*秒可获得奖励"] +n @[text="继续观看"]',
+          matches: [
+            '[text~="浏览\\\\d+秒可领\\\\d+金币"]',
+            '[text="音量按钮"]',
+          ],
         },
         {
           key: 1030,
@@ -296,7 +294,7 @@ export default defineGkdApp({
           actionCd: 4700,
           activityIds: [],
           matches: '[childCount=4] > ProgressBar + [text~="\\\\d+金币"]',
-          position: { left: 0, bottom: '-height * 5' },
+          position: { left: 0, bottom: '-height' },
         },
         {
           key: 1140,
