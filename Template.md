@@ -45,8 +45,6 @@ https://raw.githubusercontent.com/happyDom/dyySubscriptionPhone/main/dist/gkd.js
 
 [gkd-kit/subscription-template](https://github.com/gkd-kit/subscription-template/tree/main)
 
-[gkd-kit/subscription](https://github.com/gkd-kit/subscription)
-
 [AIsouler/GKD_subscription](https://github.com/AIsouler/GKD_subscription)
 
 ## 感谢以下开发者的贡献
