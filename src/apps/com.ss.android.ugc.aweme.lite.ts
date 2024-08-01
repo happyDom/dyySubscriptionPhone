@@ -292,7 +292,6 @@ export default defineGkdApp({
           key: 1130,
           name: '翻页[1130]',
           actionCd: 4700,
-          forcedTime: 1800000, //强制 30min 内执行此规则
           activityIds: [],
           matches: '[childCount=4] > ProgressBar + [text~="\\\\d+金币"]',
           position: { left: 0, bottom: '-height' },
