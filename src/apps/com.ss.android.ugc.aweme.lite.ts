@@ -117,13 +117,13 @@ export default defineGkdApp({
           key: 800,
           name: '开宝箱[800]',
           actionCd: 5000,
-          matches: 'CustomUiImage +4 UIView + *',
+          matches: 'CustomUiImage +4 UIView +2 [text="领金币"]',
         },
         {
           key: 801,
           name: '开宝箱[801]',
           actionCdKey: 800,
-          matches: 'FlattenUIImage +4 @UIView + *',
+          matches: 'FlattenUIImage +4 @UIView +2 [text="领金币"]',
         },
         {
           key: 810,
@@ -271,7 +271,7 @@ export default defineGkdApp({
           name: '阅读第一部小说[1110]',
           matches: [
             '[text="书架"] +2 [text="小说"] +2 [text="故事"]',
-            '@FlattenUIText[text="1"] + FlattenUIText[text.length>2]',
+            '@FlattenUIText[text="1"] + FlattenUIText[text.length>0]',
           ],
         },
         {
@@ -292,6 +292,7 @@ export default defineGkdApp({
           key: 1130,
           name: '翻页[1130]',
           actionCd: 4700,
+          forcedTime: 1800000, //强制 30min 内执行此规则
           activityIds: [],
           matches: '[childCount=4] > ProgressBar + [text~="\\\\d+金币"]',
           position: { left: 0, bottom: '-height' },
