@@ -188,6 +188,7 @@ export default defineGkdApp({
           key: 875,
           name: '返回[875]',
           preKeys: [850],
+          actionDelay: 100,
           matches: '[depth=0]',
           action: 'back',
         },
