@@ -197,7 +197,7 @@ export default defineGkdApp({
           activityIds:
             'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
           matches:
-            '[text$=" 的广告"][visibleToUser=true] +(2,3) @ImageView[clickable=true]',
+            '[text$=" 的广告"][visibleToUser=true] +(2,3) ImageView[clickable=true]',
         },
         {
           key: 602,
@@ -205,6 +205,14 @@ export default defineGkdApp({
           activityIds: 'com.zhihu.android.ContentActivity',
           matches:
             '[text="的广告"] <3 * +(5-n) ViewGroup > @ImageView[clickable=true][visibleToUser=true] - * [text="立即下载"]',
+        },
+        {
+          key: 603,
+          name: '点 x[603]',
+          activityIds:
+            'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
+          matches:
+            '[text$=" 的广告"] < * - ImageView[clickable=true][visibleToUser=true]',
         },
         {
           key: 625,
