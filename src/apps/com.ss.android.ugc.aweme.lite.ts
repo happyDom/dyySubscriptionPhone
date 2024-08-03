@@ -236,7 +236,15 @@ export default defineGkdApp({
         },
         {
           key: 931,
-          name: '收下金币[931]',
+          name: '看视频[931]',
+          actionCdKey: 930,
+          preKeys: [920, 921],
+          matches: '[text~="看视频再领 \\\\d* 金币"]',
+          snapshotUrls: ['https://i.gkd.li/i/16480967'],
+        },
+        {
+          key: 932,
+          name: '收下金币[932]',
           actionCdKey: 930,
           preKeys: [920, 921],
           matches: 'FlattenUIText[text="评价并收下金币"]',
