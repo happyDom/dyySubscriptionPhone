@@ -330,5 +330,22 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      name: '局部广告-关注小弹窗',
+      key: 14,
+      desc: '点 x',
+      enable: true,
+      quickFind: true,
+      rules: [
+        {
+          key: 1410,
+          name: '点 x[1410]',
+          activityIds:
+            'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
+          matches:
+            '@[vid="close_img"] +n [vid="sub_title_tv"][text^="看了这么久，点个关注"]',
+        },
+      ],
+    },
   ],
 });
