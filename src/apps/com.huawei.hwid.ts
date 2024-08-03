@@ -75,5 +75,19 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 4,
+      name: '通知提示-是否允许xxx发送通知',
+      desc: '禁止',
+      enable: true,
+      rules: [
+        {
+          key: 400,
+          name: '禁止[400]',
+          matches:
+            '[text~="是否允许“.*”发送通知？"] < * < * < * Button[text="禁止"]',
+        },
+      ],
+    },
   ],
 });
