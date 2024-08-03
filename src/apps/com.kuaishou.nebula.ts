@@ -51,5 +51,21 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 4,
+      name: '全屏广告-关注并退出',
+      desc: '直接 退出直播间',
+      enable: true,
+      quickFind: true,
+      activityIds: 'com.yxcorp.gifshow.HomeActivity',
+      rules: [
+        {
+          key: 400,
+          activityIds:
+            'com.kuaishou.live.core.basic.activity.LiveSlideActivity',
+          matches: '@[text="关注并退出"] < * + * [text="退出直播间"]',
+        },
+      ],
+    },
   ],
 });
