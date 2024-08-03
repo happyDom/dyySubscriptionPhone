@@ -36,5 +36,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 3,
+      name: '全屏广告-推荐弹窗',
+      desc: '点 x',
+      enable: true,
+      quickFind: true,
+      activityIds: 'com.yxcorp.gifshow.HomeActivity',
+      rules: [
+        {
+          key: 300,
+          name: '点 x[300]',
+          matches: '[vid="title_view"][text*="推荐"] +n [vid="close_btn"]',
+        },
+      ],
+    },
   ],
 });
