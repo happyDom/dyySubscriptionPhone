@@ -355,5 +355,21 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      name: '局部广告-广告 + x',
+      key: 15,
+      desc: '点 x',
+      enable: true,
+      quickFind: true,
+      rules: [
+        {
+          key: 1510,
+          name: '点 x[1510]',
+          activityIds:
+            'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
+          matches: 'ViewGroup[childCount=3] > @ImageView -2 [text="广告"]',
+        },
+      ],
+    },
   ],
 });
