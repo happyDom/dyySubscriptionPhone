@@ -371,5 +371,22 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      name: '全屏广告-内容推送通知',
+      key: 16,
+      desc: '点 x',
+      enable: true,
+      quickFind: true,
+      rules: [
+        {
+          key: 1610,
+          name: '点 x[1610]',
+          activityIds:
+            'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
+          matches: '@[vid="btn_close"] +n [text$="优质内容推送"]',
+          snapshotUrls: 'https://i.gkd.li/i/16534868',
+        },
+      ],
+    },
   ],
 });
