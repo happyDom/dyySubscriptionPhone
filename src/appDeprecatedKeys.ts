@@ -178,4 +178,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '华为桌面',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.eg.android.AlipayGphone',
+    name: '支付宝',
+    deprecatedKeys: [],
+  },
 ];
