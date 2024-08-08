@@ -92,5 +92,22 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 5,
+      name: '功能类-关联打开快应用',
+      desc: '点 禁止',
+      enable: true,
+      quickFind: true,
+      activityIds: 'com.huawei.fastapp.app.processManager.DeepLinkActivity',
+      rules: [
+        {
+          key: 510,
+          name: '点 禁止[510]',
+          matches:
+            '@Button[text="禁止"] < * < * <n * [text~="“.*打开“.*”快应用"]',
+          snapshotUrls: 'https://i.gkd.li/i/16539516',
+        },
+      ],
+    },
   ],
 });
