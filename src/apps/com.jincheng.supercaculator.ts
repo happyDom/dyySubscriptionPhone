@@ -77,6 +77,18 @@ export default defineGkdApp({
           matches:
             'TextView[text="进入小程序"] <<2 FrameLayout -3 FrameLayout > ImageView[visibleToUser=true]',
         },
+        {
+          key: 10,
+          name: '点 x[10]',
+          quickFind: false,
+          matches:
+            '@Image[text=""][width<100][height<100] < View - [text="反馈"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/16538288',
+            'https://i.gkd.li/i/16538295',
+            'https://i.gkd.li/i/16538299',
+          ],
+        },
       ],
     },
   ],
