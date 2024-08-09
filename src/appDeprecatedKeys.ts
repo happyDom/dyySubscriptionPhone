@@ -183,4 +183,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '支付宝',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.taobao.taobao',
+    name: '淘宝',
+    deprecatedKeys: [],
+  },
 ];
