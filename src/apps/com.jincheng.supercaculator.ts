@@ -82,11 +82,12 @@ export default defineGkdApp({
           name: '点 x[10]',
           quickFind: false,
           matches:
-            '@Image[text=""][width<100][height<100] < View - [text="反馈"]',
+            '@Image[text=""][width<100][height<100] < View <(10-n) View [text="反馈"]',
           snapshotUrls: [
             'https://i.gkd.li/i/16538288',
             'https://i.gkd.li/i/16538295',
             'https://i.gkd.li/i/16538299',
+            'https://i.gkd.li/i/16554962',
           ],
         },
       ],
