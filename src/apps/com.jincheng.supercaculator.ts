@@ -15,7 +15,7 @@ export default defineGkdApp({
       actionCdKey: 0,
       actionMaximumKey: 0,
       quickFind: true,
-      actionDelay: 300,
+      actionDelay: 100,
       rules: [
         {
           key: 0,
