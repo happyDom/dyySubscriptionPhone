@@ -93,20 +93,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 7,
-      name: '全屏广告-恭喜获得金币',
-      desc: '点 x',
-      enable: true,
-      activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
-      rules: [
-        {
-          key: 700,
-          name: '点 x[700]',
-          matches: '[vid="at-"] >3 View[clickable=true][childCount=0]',
-        },
-      ],
-    },
-    {
       key: 8,
       name: '功能类-直播间金币奖励',
       desc: '自动开宝箱领金币',
