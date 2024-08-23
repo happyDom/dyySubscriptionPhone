@@ -188,4 +188,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '淘宝',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.xingin.xhs',
+    name: '小红书',
+    deprecatedKeys: [],
+  },
 ];
