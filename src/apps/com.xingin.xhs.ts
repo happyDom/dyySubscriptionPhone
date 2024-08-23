@@ -21,5 +21,22 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 1,
+      name: '功能类-推荐关注',
+      desc: '点返回键',
+      enable: true,
+      quickFind: true,
+      activityIds: 'com.xingin.alpha.audience.v2.AlphaAudienceActivityV2',
+      rules: [
+        {
+          key: 105,
+          name: '点 返回键[105]',
+          matches: '[text="看我这么久，关注一下？"] +(5-n) [text="立即关注"]',
+          action: 'back',
+          snapshotUrls: 'https://i.gkd.li/i/16705300',
+        },
+      ],
+    },
   ],
 });
