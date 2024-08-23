@@ -8,16 +8,24 @@ export default defineGkdApp({
     {
       key: 0,
       name: '局部广告-反馈调查',
-      desc: '点 不确定',
+      desc: '点 不确定 或 x',
       enable: true,
       quickFind: true,
       activityIds: 'com.yxcorp.gifshow.HomeActivity',
       rules: [
         {
           key: 0,
-          name: '点击不确定',
+          name: '不确定[0]',
           matches:
             '@[text="不确定"][visibleToUser=true] <<n * > TextView[text^="反馈："]',
+        },
+        {
+          key: 1,
+          name: '点 x[1]',
+          activityIds: 'com.yxcorp.gifshow.detail.PhotoDetailActivity',
+          matches:
+            '@ImageView[vid="survey_close"] - [text="反馈：您对此条视频满意吗？"]',
+          snapshotUrls: 'https://i.gkd.li/i/16625913',
         },
       ],
     },
