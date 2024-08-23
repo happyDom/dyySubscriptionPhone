@@ -356,14 +356,31 @@ export default defineGkdApp({
       desc: '点 x',
       enable: true,
       quickFind: true,
+      activityIds:
+        'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
       rules: [
         {
           key: 1610,
-          name: '点 x[1610]',
-          activityIds:
-            'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
+          name: '优质内容推送：点 x[1610]',
           matches: '@[vid="btn_close"] +n [text$="优质内容推送"]',
           snapshotUrls: 'https://i.gkd.li/i/16534868',
+        },
+      ],
+    },
+    {
+      name: '局部广告-分享提示',
+      key: 17,
+      desc: '点 x',
+      enable: true,
+      activityIds:
+        'com.zhihu.android.mixshortcontainer.MixShortContainerActivity',
+      rules: [
+        {
+          key: 1705,
+          name: '快分享给好友吧：点 x[1705]',
+          matches:
+            '[text="快分享给好友吧！"] <n * View Image[width<50 && height<50]',
+          snapshotUrls: 'https://i.gkd.li/i/16685752',
         },
       ],
     },
