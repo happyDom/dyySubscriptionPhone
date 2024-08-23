@@ -223,27 +223,6 @@ export default defineGkdApp({
       ],
     },
     {
-      name: '更新提示-版本内测',
-      key: 7,
-      desc: '不再提醒 -> 取消',
-      enable: true,
-      quickFind: true,
-      rules: [
-        {
-          key: 700,
-          name: '勾选不再提醒[700]',
-          matches:
-            '[text*="版本内测"] <<(-n+5) FrameLayout + * >3 [text="不再提醒"]',
-        },
-        {
-          key: 725,
-          name: '取消[725]',
-          preKeys: 700,
-          matches: 'Button[text="取消"]',
-        },
-      ],
-    },
-    {
       name: '功能类-自动播放GIF',
       key: 8,
       desc: '点GIF图标',
