@@ -52,6 +52,22 @@ export default defineGkdApp({
       ],
     },
     {
+      name: '局部广告-推荐页置顶广告',
+      key: 2,
+      desc: '点 x',
+      enable: true,
+      quickFind: true,
+      activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
+      rules: [
+        {
+          key: 205,
+          name: '点 x[205]',
+          matches: 'FrameLayout[vid="ad_container"] [vid="img_close_focus"]',
+          snapshotUrls: 'https://i.gkd.li/i/16886757',
+        },
+      ],
+    },
+    {
       name: '功能类-自动播放GIF',
       key: 8,
       desc: '点GIF图标',
