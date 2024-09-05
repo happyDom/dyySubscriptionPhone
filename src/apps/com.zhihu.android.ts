@@ -79,7 +79,7 @@ export default defineGkdApp({
           key: 305,
           name: '点 x[305]',
           matches:
-            'TextView[text=" 的广告"] < * <n * +n * ViewGroup[childCount=1] ImageView[vid=null && width=height && width<70]',
+            'TextView[text=" 的广告"] < * <n * +n * ViewGroup[childCount=1] ImageView[vid=null && height<70 && width<70]',
           snapshotUrls: ['https://i.gkd.li/i/16886915'],
         },
         {
