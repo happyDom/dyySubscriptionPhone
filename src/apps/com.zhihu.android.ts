@@ -26,8 +26,7 @@ export default defineGkdApp({
       desc: '关注->收藏->赞同->评论',
       enable: true,
       quickFind: true,
-      actionDelay: 450,
-      actionCdKey: 100,
+      actionCdKey: 1000,
       activityIds: 'com.zhihu.android.app.ui.activity.HostActivity',
       rules: [
         {
@@ -49,187 +48,6 @@ export default defineGkdApp({
           key: 103,
           name: '评论转发',
           matches: '[text="评论转发"] - [vid="count_view"] - ImageView',
-        },
-      ],
-    },
-    {
-      name: '分段广告-广告・xxxx・立即查看/热度xxx',
-      key: 2,
-      desc: '关闭->点第一个选项',
-      enable: true,
-      quickFind: true,
-      rules: [
-        {
-          key: 200,
-          name: '点 x[200]',
-          activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
-          matches: '[text^="广告 · "][visibleToUser=true] < * + * > ImageView',
-        },
-        {
-          key: 225,
-          name: '点第一个选项[225]',
-          preKeys: [200],
-          actionCdKey: 226,
-          matches:
-            '[vid="recycler_view"] > [index=0][visibleToUser=true] >3 [vid="tv_content"]',
-        },
-        {
-          key: 226,
-          name: '不感兴趣[226]',
-          preKeys: [200],
-          matches:
-            'FrameLayout[depth=0] >(-n+10) TextView[text="不感兴趣"][visibleToUser=true]',
-        },
-      ],
-    },
-    {
-      name: '分段广告-xxx 的广告', // xxxx 的广告
-      key: 3,
-      desc: '关闭->点第一个选项',
-      enable: true,
-      quickFind: true,
-      rules: [
-        {
-          key: 300,
-          name: '点 x[300]',
-          actionCd: 2000,
-          activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
-          matches:
-            '[text=" 的广告"][visibleToUser=true] <<4 * +3 * >2 ImageView[visibleToUser=true]',
-        },
-        {
-          key: 301,
-          name: '点 x[301]',
-          actionCdKey: 300,
-          activityIds:
-            'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
-          matches:
-            '[text$="的广告"][visibleToUser=true] <2 * +2 ImageView[clickable=true]',
-        },
-        {
-          key: 302,
-          name: '点 x[302]',
-          actionCdKey: 300,
-          activityIds: 'com.zhihu.android.ContentActivity',
-          matches:
-            '[text$="的广告"][visibleToUser=true] <3 * +4 * ImageView[visibleToUser=true]',
-        },
-        {
-          key: 303,
-          name: '点 x[303]',
-          actionCdKey: 300,
-          activityIds:
-            'com.zhihu.android.mixshortcontainer.MixShortContainerActivity',
-          matches: '@Image[clickable=true] + TextView[text$="的广告"]',
-        },
-        {
-          key: 325,
-          name: '不感兴趣[325]',
-          preKeys: [300, 301, 302],
-          matches: '[text$="不感兴趣"][visibleToUser=true][vid="tv_content"]',
-        },
-      ],
-    },
-    {
-      name: '分段广告-xxxx・商品介绍',
-      key: 4,
-      desc: '关闭->点第一个选项',
-      enable: true,
-      quickFind: true,
-      rules: [
-        {
-          key: 400,
-          name: '点 x[400]',
-          activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
-          matches:
-            '[text="· 商品介绍"][visibleToUser=true] <2 * + * > ImageView',
-        },
-        {
-          key: 425,
-          name: '点第一个选项[425]',
-          preKeys: [400],
-          matches:
-            '[vid="recycler_view"] > [index=0][visibleToUser=true] >3 [vid="tv_content"]',
-        },
-      ],
-    },
-    {
-      name: '分段广告-xxxx・咨询服务',
-      key: 5,
-      desc: '关闭->点第一个选项',
-      enable: true,
-      quickFind: true,
-      rules: [
-        {
-          key: 500,
-          name: '点 x[500]',
-          activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
-          matches:
-            '[text="· 咨询服务"][visibleToUser=true] <2 * + * > ImageView',
-        },
-        {
-          key: 525,
-          name: '点第一个选项[525]',
-          preKeys: [500],
-          matches:
-            '[vid="recycler_view"] > [index=0][visibleToUser=true] >3 [vid="tv_content"]',
-        },
-      ],
-    },
-    {
-      name: '局部广告-xxxx 的广告',
-      key: 6,
-      desc: '点 x',
-      enable: true,
-      quickFind: true,
-      rules: [
-        {
-          key: 600,
-          name: '点 x[600]',
-          activityIds:
-            'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
-          matches:
-            '[text$=" 的广告"][visibleToUser=true] +3 @ImageView - * >3 [text="立即下载"]',
-        },
-        {
-          key: 601,
-          name: '点 x[601]',
-          actionCdKey: 600,
-          activityIds:
-            'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
-          matches:
-            '[text$=" 的广告"][visibleToUser=true] +(2,3) ImageView[clickable=true]',
-        },
-        {
-          key: 602,
-          name: '点 x[602]',
-          actionCdKey: 600,
-          activityIds: 'com.zhihu.android.ContentActivity',
-          matches:
-            '[text="的广告"] <3 * +(5-n) ViewGroup > @ImageView[clickable=true][visibleToUser=true] - * [text="立即下载"]',
-        },
-        {
-          key: 603,
-          name: '点 x[603]',
-          actionCdKey: 600,
-          activityIds:
-            'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
-          matches:
-            '[text$=" 的广告"] < * - ImageView[clickable=true][visibleToUser=true]',
-        },
-        {
-          key: 604,
-          name: '点 x[604]',
-          actionCdKey: 600,
-          matches: '[text$=" 的广告"] +n TextView[text="×"]',
-          snapshotUrls: 'https://i.gkd.li/i/16685757',
-        },
-        {
-          key: 625,
-          name: '不感兴趣[625]',
-          preKeys: [600, 601, 602, 603],
-          activityIds: 'com.zhihu.android.ContentActivity',
-          matches: '[text$="不感兴趣"][visibleToUser=true]',
         },
       ],
     },
@@ -281,23 +99,6 @@ export default defineGkdApp({
       ],
     },
     {
-      name: '局部广告-无广告字样卡片',
-      key: 11,
-      desc: '点 x',
-      enable: true,
-      quickFind: true,
-      activityIds:
-        'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
-      rules: [
-        {
-          key: 1100,
-          name: '点 x[1100]',
-          matches:
-            'FrameLayout ViewGroup[childCount=4] ImageView + TextView[text.length>1] + TextView[text=null] + ImageView[clickable=true]',
-        },
-      ],
-    },
-    {
       name: '功能类-评论氛围',
       key: 12,
       desc: '点 x',
@@ -342,22 +143,6 @@ export default defineGkdApp({
             'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
           matches:
             '@[vid="close_img"] +n [vid="sub_title_tv"][text^="看了这么久，点个关注"]',
-        },
-      ],
-    },
-    {
-      name: '局部广告-广告 + x',
-      key: 15,
-      desc: '点 x',
-      enable: true,
-      quickFind: true,
-      rules: [
-        {
-          key: 1510,
-          name: '点 x[1510]',
-          activityIds:
-            'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
-          matches: 'ViewGroup[childCount=3] > @ImageView -2 [text="广告"]',
         },
       ],
     },
