@@ -68,25 +68,33 @@ export default defineGkdApp({
       ],
     },
     {
-      name: '局部广告-推荐页 xxx 的广告',
+      name: '分段广告-xxx 的广告',
       key: 3,
-      desc: '点 x',
+      desc: '点 x -> 不感兴趣',
       enable: true,
       quickFind: true,
-      activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
       rules: [
         {
           key: 305,
           name: '点 x[305]',
+          activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
           matches:
-            'TextView[text=" 的广告"] < * <n * +n * ViewGroup[childCount=1] ImageView[vid=null && height<70 && width<70]',
+            'TextView[text=" 的广告"] < * <n * +n * ViewGroup[childCount=1] ImageView[vid=null && height<70 && width<70][visibleToUser=true]',
           snapshotUrls: ['https://i.gkd.li/i/16886915'],
+        },
+        {
+          key: 306,
+          name: '点 x[306]',
+          activityIds:
+            'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
+          matches:
+            'TextView[text$="的广告"] <2 * + TextView[text=null] + ImageView[vid=null && height<70][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/16892903',
         },
         {
           key: 325,
           name: '不感兴趣[325]',
-          preKeys: [305],
-          activityIds: [],
+          preKeys: [305, 306],
           matches:
             'TextView[text="屏蔽这条广告:"] < * +n * TextView[text*="不感兴趣"]',
           snapshotUrls: ['https://i.gkd.li/i/16887052'],
@@ -94,7 +102,7 @@ export default defineGkdApp({
       ],
     },
     {
-      name: '局部广告-回答页面 xxx 的广告',
+      name: '局部广告-xxx 的广告',
       key: 4,
       desc: '点 x',
       enable: true,
@@ -106,7 +114,7 @@ export default defineGkdApp({
           key: 405,
           name: '点 x[405]',
           matches:
-            '[text$=" 的广告"] +3 @ImageView[visibleToUser=true] - ViewGroup TextView[text="立即下载"]',
+            '[text$="的广告"] +3 @ImageView[visibleToUser=true] - ViewGroup TextView[text="立即下载"]',
           snapshotUrls: ['https://i.gkd.li/i/16887120'],
         },
       ],
