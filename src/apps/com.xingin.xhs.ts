@@ -11,13 +11,19 @@ export default defineGkdApp({
       desc: '暂不开启',
       enable: true,
       quickFind: true,
-      activityIds: 'com.xingin.matrix.detail.activity.DetailFeedActivity',
+      activityIds: [
+        'com.xingin.matrix.detail.activity.DetailFeedActivity',
+        'com.xingin.xhs.index.v2.IndexActivityV2',
+      ],
       rules: [
         {
           key: 0,
           name: '暂不开启[0]',
           matches: '[text="开启个性化通知"] +n * Button[text="暂不开启"]',
-          snapshotUrls: 'https://i.gkd.li/i/16634178',
+          snapshotUrls: [
+            'https://i.gkd.li/i/16634178',
+            'https://i.gkd.li/i/16736608',
+          ],
         },
       ],
     },
