@@ -94,6 +94,24 @@ export default defineGkdApp({
       ],
     },
     {
+      name: '局部广告-回答页面 xxx 的广告',
+      key: 4,
+      desc: '点 x',
+      enable: true,
+      quickFind: true,
+      activityIds:
+        'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
+      rules: [
+        {
+          key: 405,
+          name: '点 x[405]',
+          matches:
+            '[text$=" 的广告"] +3 @ImageView[visibleToUser=true] - ViewGroup TextView[text="立即下载"]',
+          snapshotUrls: ['https://i.gkd.li/i/16887120'],
+        },
+      ],
+    },
+    {
       name: '功能类-自动播放GIF',
       key: 8,
       desc: '点GIF图标',
