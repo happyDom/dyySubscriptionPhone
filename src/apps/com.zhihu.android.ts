@@ -95,30 +95,21 @@ export default defineGkdApp({
           snapshotUrls: 'https://i.gkd.li/i/16892903',
         },
         {
+          key: 307,
+          name: '点 x[307]',
+          activityIds:
+            'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
+          matches:
+            '[text$="的广告"] +3 @ImageView[visibleToUser=true] - ViewGroup TextView[text="立即下载"]',
+          snapshotUrls: ['https://i.gkd.li/i/16887120'],
+        },
+        {
           key: 325,
           name: '不感兴趣[325]',
           preKeys: [305, 306],
           matches:
             'TextView[text="屏蔽这条广告:"] < * +n * TextView[text*="不感兴趣"]',
           snapshotUrls: ['https://i.gkd.li/i/16887052'],
-        },
-      ],
-    },
-    {
-      name: '局部广告-xxx 的广告',
-      key: 4,
-      desc: '点 x',
-      enable: true,
-      quickFind: true,
-      activityIds:
-        'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
-      rules: [
-        {
-          key: 405,
-          name: '点 x[405]',
-          matches:
-            '[text$="的广告"] +3 @ImageView[visibleToUser=true] - ViewGroup TextView[text="立即下载"]',
-          snapshotUrls: ['https://i.gkd.li/i/16887120'],
         },
       ],
     },
