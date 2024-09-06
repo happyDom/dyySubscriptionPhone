@@ -75,8 +75,17 @@ export default defineGkdApp({
       quickFind: true,
       rules: [
         {
+          key: 304,
+          name: '点 x[304]',
+          activityIds: 'com.zhihu.android.ContentActivity',
+          matches:
+            'TextView[text$="的广告"] <n * +n ViewGroup TextView[text$="万浏览"] +(2,3) ImageView[visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/16904575',
+        },
+        {
           key: 305,
           name: '点 x[305]',
+          actionCdKey: 304,
           activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
           matches:
             'TextView[text=" 的广告"] <(1,2) * <n * +n * ViewGroup[childCount=1] ImageView[vid=null && height<70 && width<70][visibleToUser=true]',
@@ -88,7 +97,7 @@ export default defineGkdApp({
         {
           key: 306,
           name: '点 x[306]',
-          actionCdKey: 305,
+          actionCdKey: 304,
           activityIds:
             'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
           matches:
@@ -98,7 +107,7 @@ export default defineGkdApp({
         {
           key: 307,
           name: '点 x[307]',
-          actionCdKey: 305,
+          actionCdKey: 304,
           activityIds:
             'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
           matches:
@@ -108,10 +117,11 @@ export default defineGkdApp({
         {
           key: 308,
           name: '点 x[308]',
-          actionCdKey: 305,
+          actionCdKey: 304,
           activityIds:
             'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
-          matches: 'TextView[text$="的广告"] +(2,3) ImageView',
+          matches:
+            'TextView[text$="的广告"] +(2,3) ImageView[visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/16895251',
             'https://i.gkd.li/i/16901140',
@@ -120,7 +130,7 @@ export default defineGkdApp({
         {
           key: 325,
           name: '不感兴趣[325]',
-          preKeys: [305, 306],
+          preKeys: [304, 305, 306],
           matches:
             'TextView[text="屏蔽这条广告:"] < * +n * TextView[text*="不感兴趣"]',
           snapshotUrls: ['https://i.gkd.li/i/16887052'],
