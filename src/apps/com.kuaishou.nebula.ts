@@ -61,17 +61,33 @@ export default defineGkdApp({
     },
     {
       key: 4,
-      name: '全屏广告-关注并退出',
-      desc: '直接 退出直播间',
+      name: '功能类-退出直播间',
+      desc: '直接退出',
+      enable: true,
+      quickFind: true,
+      activityIds: 'com.kuaishou.live.core.basic.activity.LiveSlideActivity',
+      rules: [
+        {
+          key: 400,
+          name: '退出[400]',
+          matches: '@[text="关注并退出"] < * + * [text="退出直播间"]',
+        },
+      ],
+    },
+    {
+      key: 5,
+      name: '功能类-发现新朋友',
+      desc: '点返回键',
       enable: true,
       quickFind: true,
       activityIds: 'com.yxcorp.gifshow.HomeActivity',
       rules: [
         {
-          key: 400,
-          activityIds:
-            'com.kuaishou.live.core.basic.activity.LiveSlideActivity',
-          matches: '@[text="关注并退出"] < * + * [text="退出直播间"]',
+          key: 500,
+          name: '返回键[500]',
+          matches: 'TextView[vid="title_tip"][text="发现新朋友"]',
+          snapshotUrls: 'https://i.gkd.li/i/16871001',
+          action: 'back',
         },
       ],
     },
