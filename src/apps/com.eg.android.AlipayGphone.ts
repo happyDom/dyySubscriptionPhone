@@ -29,12 +29,12 @@ export default defineGkdApp({
       desc: '点 x',
       enable: true,
       quickFind: true,
+      activityIds: 'com.eg.android.AlipayGphone.AlipayLogin',
       rules: [
         {
           key: 100,
           name: '点 x[100]',
           quickFind: false,
-          activityIds: 'com.eg.android.AlipayGphone.AlipayLogin',
           matches:
             'FrameLayout[desc="底部广告"][childCount=2] ImageView + ImageView[width<50 && height<50]',
           snapshotUrls: 'https://i.gkd.li/i/16901727',
@@ -43,18 +43,17 @@ export default defineGkdApp({
     },
     {
       key: 2,
-      name: '权限提示-底部广告',
+      name: '权限提示-通知权限',
       desc: '点 x',
       enable: true,
-      quickFind: true,
+      activityIds: 'com.eg.android.AlipayGphone.AlipayLogin',
       rules: [
         {
           key: 200,
           name: '点 x[200]',
-          activityIds: 'com.eg.android.AlipayGphone.AlipayLogin',
           matches:
-            'FrameLayout[desc="底部广告"][childCount=2] ImageView + ImageView[width<50 && height<50]',
-          snapshotUrls: 'https://i.gkd.li/i/16901727',
+            '@FrameLayout[desc="关闭"] - * TextView[text^="开启通知权限"]',
+          snapshotUrls: 'https://i.gkd.li/i/16747472',
         },
       ],
     },
