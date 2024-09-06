@@ -23,5 +23,40 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 1,
+      name: '局部广告-底部广告',
+      desc: '点 x',
+      enable: true,
+      quickFind: true,
+      rules: [
+        {
+          key: 100,
+          name: '点 x[100]',
+          quickFind: false,
+          activityIds: 'com.eg.android.AlipayGphone.AlipayLogin',
+          matches:
+            'FrameLayout[desc="底部广告"][childCount=2] ImageView + ImageView[width<50 && height<50]',
+          snapshotUrls: 'https://i.gkd.li/i/16901727',
+        },
+      ],
+    },
+    {
+      key: 2,
+      name: '权限提示-底部广告',
+      desc: '点 x',
+      enable: true,
+      quickFind: true,
+      rules: [
+        {
+          key: 200,
+          name: '点 x[200]',
+          activityIds: 'com.eg.android.AlipayGphone.AlipayLogin',
+          matches:
+            'FrameLayout[desc="底部广告"][childCount=2] ImageView + ImageView[width<50 && height<50]',
+          snapshotUrls: 'https://i.gkd.li/i/16901727',
+        },
+      ],
+    },
   ],
 });
