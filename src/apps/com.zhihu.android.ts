@@ -88,10 +88,11 @@ export default defineGkdApp({
           actionCdKey: 304,
           activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
           matches:
-            'TextView[text=" 的广告"] <(1,2) * <n * +n * ViewGroup[childCount=1] ImageView[vid=null && height<70 && width<70][visibleToUser=true]',
+            'TextView[text=" 的广告"] <(1,2) * <n * +n * ViewGroup[childCount=1] > ImageView[vid=null && height<70 && width<70][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/16886915',
             'https://i.gkd.li/i/16901094',
+            'https://i.gkd.li/i/16928591',
           ],
         },
         {
