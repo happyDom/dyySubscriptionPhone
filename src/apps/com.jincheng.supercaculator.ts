@@ -9,93 +9,40 @@ export default defineGkdApp({
       key: 0,
       name: '开屏广告',
       desc: 'x 掉',
-      matchTime: 10000,
+      matchTime: 5000,
       actionMaximum: 1,
       resetMatch: 'app',
-      actionCdKey: 0,
       actionMaximumKey: 0,
-      quickFind: true,
-      actionDelay: 100,
       rules: [
         {
           key: 0,
           name: '点 x[0]',
-          actionDelay: 450,
-          matches: '[text="广告"] <<4 View +2 View > Image',
+          actionDelay: 100,
+          quickFind: true,
+          matches: [
+            '[text*="扭动或点击" || text="进入小程序" || text="查看详情" || text*="了解更多" || text="立即申请" || text="立即咨询" || text="打开快应用"]',
+            'FrameLayout[childCount=1] > ImageView[vid=null][width<70 && height<70]',
+          ],
+          snapshotUrls: [
+            'https://i.gkd.li/i/16939771',
+            'https://i.gkd.li/i/16939078',
+            'https://i.gkd.li/i/16939109',
+            'https://i.gkd.li/i/16734713',
+            'https://i.gkd.li/i/16933730',
+          ],
         },
         {
           key: 1,
           name: '点 x[1]',
-          matches:
-            'TextView[text="立即申请"] <<2 FrameLayout -(-n+5) FrameLayout > FrameLayout > ImageView[height<70 && width<70]',
-        },
-        {
-          key: 2,
-          name: '点 x[2]',
-          matches:
-            'TextView[text="查看详情"] <<2 FrameLayout -(-n+5) FrameLayout > FrameLayout > ImageView[height<70 && width<70]',
-        },
-        {
-          key: 3,
-          name: '点 x[3]',
-          matches:
-            'TextView[text*="了解更多"] <<(2,3) FrameLayout -(2,3) FrameLayout > FrameLayout > ImageView[height<70 && width<70]',
-        },
-        {
-          key: 4,
-          name: '点 x[4]',
-          matches:
-            'TextView[text="进入小程序"] <<2 FrameLayout -(-1n+5) FrameLayout > FrameLayout > ImageView[height<70 && width<70]',
-        },
-        {
-          key: 5,
-          name: '点 x[5]',
-          matches:
-            'TextView[text="立即申请"] <<2 FrameLayout -3 FrameLayout > ImageView[height<70 && width<70]',
-        },
-        {
-          key: 6,
-          name: '点 x[6]',
-          matches:
-            'TextView[text="查看详情"] <<2 FrameLayout -3 FrameLayout > ImageView[height<70 && width<70]',
-        },
-        {
-          key: 7,
-          name: '点 x[7]',
-          matches:
-            'TextView[text*="了解更多"] <<(2,3) FrameLayout -(2,3) FrameLayout > ImageView[height<70 && width<70]',
-        },
-        {
-          key: 8,
-          name: '点 x[8]',
-          matches:
-            'TextView[text="进入小程序"] <<2 FrameLayout -3 FrameLayout > ImageView[height<70 && width<70]',
-        },
-        {
-          key: 9,
-          name: '点 x[9]',
-          matches:
-            'TextView[text="进入小程序"] <<2 FrameLayout -3 FrameLayout > ImageView[height<70 && width<70]',
-        },
-        {
-          key: 10,
-          name: '点 x[10]',
           quickFind: false,
-          matches:
-            '@Image[text=""][height<70 && width<70] < View <(10-n) View [text="反馈"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/16538288',
-            'https://i.gkd.li/i/16538295',
-            'https://i.gkd.li/i/16538299',
-            'https://i.gkd.li/i/16554962',
+          matches: [
+            '[text="广告"]',
+            'View[depth=15 || depth=19][childCount=1] > Image[width<55 && height<55]',
           ],
-        },
-        {
-          key: 11,
-          name: '点 x[11]',
-          matches:
-            'TextView[text="立即咨询"] <<2 FrameLayout - FrameLayout ImageView[height<70 && width<70]',
-          snapshotUrls: 'https://i.gkd.li/i/16734713',
+          snapshotUrls: [
+            'https://i.gkd.li/i/16940010',
+            'https://i.gkd.li/i/16940082',
+          ],
         },
       ],
     },
