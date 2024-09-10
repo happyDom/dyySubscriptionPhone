@@ -193,4 +193,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '小红书',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.fcbox.hiveconsumer',
+    name: '丰巢',
+    deprecatedKeys: [],
+  },
 ];
