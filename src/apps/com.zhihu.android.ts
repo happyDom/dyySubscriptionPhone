@@ -63,7 +63,7 @@ export default defineGkdApp({
           key: 205,
           name: '点 x[205]',
           matches: 'FrameLayout[vid="ad_container"] [vid="img_close_focus"]',
-          snapshotUrls: 'https://i.gkd.li/i/16886757',
+          snapshotUrls: ['https://i.gkd.li/i/16886757'],
         },
       ],
     },
@@ -80,7 +80,7 @@ export default defineGkdApp({
           activityIds: 'com.zhihu.android.ContentActivity',
           matches:
             'TextView[text$="的广告"] <n * +n ViewGroup TextView[text$="万浏览"] +(2,3) ImageView[visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/16904575',
+          snapshotUrls: ['https://i.gkd.li/i/16904575'],
         },
         {
           key: 305,
@@ -102,8 +102,8 @@ export default defineGkdApp({
           activityIds:
             'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
           matches:
-            'TextView[text$="的广告"] <2 * + TextView[text=null] + ImageView[vid=null && height<70][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/16892903',
+            'TextView[text$="的广告"] <2 * + TextView[text=null] + ImageView[height<70][visibleToUser=true]',
+          snapshotUrls: ['https://i.gkd.li/i/16892903'],
         },
         {
           key: 307,
@@ -129,12 +129,23 @@ export default defineGkdApp({
           ],
         },
         {
+          key: 309,
+          name: '点 x[309]',
+          actionCdKey: 304,
+          activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
+          matches:
+            '[text="立即查看"] -n [text^="广告"] <n * + * > ImageView[vid="menu"][width<70 && height<70]',
+          snapshotUrls: ['https://i.gkd.li/i/16957088'],
+        },
+        {
           key: 325,
           name: '不感兴趣[325]',
-          preKeys: [304, 305, 306],
-          matches:
-            'TextView[text="屏蔽这条广告:"] < * +n * TextView[text*="不感兴趣"]',
-          snapshotUrls: ['https://i.gkd.li/i/16887052'],
+          preKeys: [304, 305, 306, 309],
+          matches: '[text*="不感兴趣"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/16887052',
+            'https://i.gkd.li/i/16957089',
+          ],
         },
       ],
     },
