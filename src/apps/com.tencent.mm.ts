@@ -91,6 +91,21 @@ export default defineGkdApp({
           preKeys: [200],
           matches: '[text="关闭广告"][clickable=true]',
         },
+        {
+          key: 226,
+          name: '直接关闭[226]',
+          preKeys: [200],
+          actionCdKey: 225,
+          matches: '[text="直接关闭"]',
+          snapshotUrls: 'https://i.gkd.li/i/17053043',
+        },
+        {
+          key: 250,
+          name: '关闭该广告[250]',
+          preKeys: [226],
+          matches: '[text="关闭该广告"]',
+          snapshotUrls: 'https://i.gkd.li/i/17053039',
+        },
       ],
     },
     {
