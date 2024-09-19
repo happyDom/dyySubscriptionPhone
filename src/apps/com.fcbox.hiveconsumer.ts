@@ -36,8 +36,8 @@ export default defineGkdApp({
         },
         {
           key: 3,
-          name: '不在丰巢柜旁，取消[3]',
-          matches: ['[text*="您好像不在柜机前"]', '[vid="tvCancel"]'],
+          name: '不在丰巢柜旁',
+          matches: '[text*="您好像不在柜机前"]',
           snapshotUrls: 'https://i.gkd.li/i/16940463',
         },
         {
