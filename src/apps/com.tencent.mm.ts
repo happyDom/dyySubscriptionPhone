@@ -96,7 +96,7 @@ export default defineGkdApp({
           name: '关闭该广告[226]',
           preKeys: [200],
           actionCdKey: 225,
-          matches: '[text="关闭该广告"]',
+          matches: '@LinearLayout > [text="关闭该广告"]',
           snapshotUrls: 'https://i.gkd.li/i/17053039',
         },
         {
@@ -161,7 +161,6 @@ export default defineGkdApp({
           name: '开[525]',
           actionCd: 2000,
           preKeys: [500],
-          //activityIds: 'com.tencent.mm.plugin.luckymoney.ui.LuckyMoneyNotHookReceiveUI',
           matches: 'Button[desc="开"]',
         },
       ],
