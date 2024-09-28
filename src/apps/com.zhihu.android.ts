@@ -138,9 +138,18 @@ export default defineGkdApp({
           snapshotUrls: ['https://i.gkd.li/i/16957088'],
         },
         {
+          key: 310,
+          name: '点 x[310]',
+          actionCdKey: 304,
+          activityIds: 'com.zhihu.android.ContentActivity',
+          matches:
+            'TextView[text="广告"] < ViewGroup[childCount=3] > ImageView',
+          snapshotUrls: ['https://i.gkd.li/i/17145816'],
+        },
+        {
           key: 325,
           name: '不感兴趣[325]',
-          preKeys: [304, 305, 306, 309],
+          preKeys: [304, 305, 306, 309, 310],
           matches: '@FrameLayout[clickable=true] [text*="不感兴趣"]',
           snapshotUrls: [
             'https://i.gkd.li/i/16887052',
