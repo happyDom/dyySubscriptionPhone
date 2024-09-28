@@ -27,7 +27,10 @@ export default defineGkdApp({
       enable: true,
       quickFind: true,
       actionCdKey: 1000,
-      activityIds: 'com.zhihu.android.app.ui.activity.HostActivity',
+      activityIds: [
+        'com.zhihu.android.app.ui.activity.HostActivity',
+        'com.zhihu.android.app.ui.activity.MainActivity',
+      ],
       rules: [
         {
           key: 100,
