@@ -141,7 +141,7 @@ export default defineGkdApp({
           key: 325,
           name: '不感兴趣[325]',
           preKeys: [304, 305, 306, 309],
-          matches: '[text*="不感兴趣"]',
+          matches: '@FrameLayout[clickable=true] [text*="不感兴趣"]',
           snapshotUrls: [
             'https://i.gkd.li/i/16887052',
             'https://i.gkd.li/i/16957089',
