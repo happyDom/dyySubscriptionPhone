@@ -159,6 +159,14 @@ export default defineGkdApp({
             'https://i.gkd.li/i/16957089',
           ],
         },
+        {
+          key: 326,
+          name: '不感兴趣[326]',
+          preKeys: [304, 305, 306, 309, 310],
+          actionCdKey: 325,
+          matches: '@LinearLayout[clickable=true] [text*="不感兴趣"]',
+          snapshotUrls: ['https://i.gkd.li/i/17178987'],
+        },
       ],
     },
     {
