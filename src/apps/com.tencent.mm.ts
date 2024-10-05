@@ -173,7 +173,15 @@ export default defineGkdApp({
       rules: [
         {
           key: 600,
-          name: '点广告下拉菜单[600]',
+          name: '跳过[600]',
+          quickFind: true,
+          activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI00',
+          matches: 'TextView[text="跳过"]',
+          snapshotUrls: 'https://i.gkd.li/i/17266860',
+        },
+        {
+          key: 605,
+          name: '点广告下拉菜单[605]',
           activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI00',
           matches: [
             '[text^="打牌记账"]',
@@ -184,7 +192,7 @@ export default defineGkdApp({
         {
           key: 615,
           name: '不感兴趣[615]',
-          preKeys: [600],
+          preKeys: [605],
           matches: 'TextView[text="不感兴趣"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/17266765',
         },
