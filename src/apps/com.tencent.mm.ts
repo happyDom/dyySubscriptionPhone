@@ -170,15 +170,13 @@ export default defineGkdApp({
       name: '分段广告-打牌记账小程序',
       desc: '自动关闭广告视频',
       enable: true,
-      quickFind: true,
       rules: [
         {
           key: 600,
           name: '点广告下拉菜单[600]',
           activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI00',
-          quickFind: false,
           matches: [
-            '[text="打牌记账"]',
+            '[text^="打牌记账"]',
             'TextView[text="广告"] + Image[text="feedback_icon"]',
           ],
           snapshotUrls: 'https://i.gkd.li/i/17266758',
