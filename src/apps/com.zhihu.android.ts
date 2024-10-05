@@ -124,11 +124,15 @@ export default defineGkdApp({
           actionCdKey: 304,
           activityIds:
             'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
-          matches:
-            'TextView[text$="的广告"] +(2,3) ImageView[visibleToUser=true]',
+          anyMatches: [
+            '@ImageView[visibleToUser=true] <4 ViewGroup[childCount=4] TextView[text$="广告"]',
+            '@ImageView[visibleToUser=true] <5 ViewGroup[childCount=5] TextView[text$="广告"]',
+            '@ImageView[visibleToUser=true] <6 ViewGroup[childCount=6] TextView[text$="广告"]',
+          ],
           snapshotUrls: [
-            'https://i.gkd.li/i/16895251',
             'https://i.gkd.li/i/16901140',
+            'https://i.gkd.li/i/16895251',
+            'https://i.gkd.li/i/17266700',
           ],
         },
         {
