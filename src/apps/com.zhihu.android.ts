@@ -150,7 +150,7 @@ export default defineGkdApp({
           actionCdKey: 304,
           activityIds: 'com.zhihu.android.ContentActivity',
           matches:
-            'TextView[text="广告"] < ViewGroup[childCount=3] > ImageView',
+            '@ImageView[visibleToUser=true] <3 ViewGroup[childCount=3] TextView[text$="广告"]',
           snapshotUrls: ['https://i.gkd.li/i/17145816'],
         },
         {
