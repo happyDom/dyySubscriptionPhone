@@ -186,13 +186,6 @@ export default defineGkdApp({
           key: 615,
           name: '不感兴趣[615]',
           preKeys: [600],
-          matches: 'TextView[text="不感兴趣"]',
-          snapshotUrls: 'https://i.gkd.li/i/17266765',
-        },
-        {
-          key: 615,
-          name: '不感兴趣[615]',
-          preKeys: [600],
           matches: 'TextView[text="不感兴趣"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/17266765',
         },
