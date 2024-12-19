@@ -314,14 +314,16 @@ export default defineGkdApp({
       key: 18,
       desc: '点 x',
       enable: true,
+      quickFind: true,
       activityIds:
         'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
       rules: [
         {
           key: 1805,
           name: '点 x[1805]',
+          action: 'clickNode',
           matches:
-            '@ImageView[visibleToUser=true] < ViewGroup -n TextView[text$="的广告"]',
+            'ImageView[visibleToUser=true] < @ViewGroup[clickable=true] -n TextView[text$="的广告"]',
           snapshotUrls: [
             'https://i.gkd.li/i/18191390',
             'https://i.gkd.li/i/18191393',
