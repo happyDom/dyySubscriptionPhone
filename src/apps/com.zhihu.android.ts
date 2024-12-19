@@ -52,6 +52,11 @@ export default defineGkdApp({
           name: '评论转发',
           matches: '[text="评论转发"] - [vid="count_view"] - ImageView',
         },
+        {
+          key: 104,
+          name: '关注订阅',
+          matches: '[text="评论转发"] - [vid="count_view"] - ImageView',
+        },
       ],
     },
     {
@@ -301,6 +306,26 @@ export default defineGkdApp({
           matches:
             '[text="快分享给好友吧！"] <n * View Image[width<50 && height<50]',
           snapshotUrls: 'https://i.gkd.li/i/16685752',
+        },
+      ],
+    },
+    {
+      name: '局部广告-xx 的广告',
+      key: 18,
+      desc: '点 x',
+      enable: true,
+      activityIds:
+        'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
+      rules: [
+        {
+          key: 1805,
+          name: '点 x[1805]',
+          matches:
+            '@ImageView[visibleToUser=true] < ViewGroup -n TextView[text$="的广告"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/18191390',
+            'https://i.gkd.li/i/18191393',
+          ],
         },
       ],
     },
