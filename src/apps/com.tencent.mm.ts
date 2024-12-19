@@ -129,15 +129,16 @@ export default defineGkdApp({
       desc: '勾选 原图',
       enable: true,
       quickFind: true,
+      actionCd: 2000,
       activityIds: [
         'com.tencent.mm.plugin.gallery.ui.AlbumPreviewUI',
         'com.tencent.mm.plugin.gallery.ui.ImagePreviewUI',
       ],
       rules: [
         {
-          key: 300,
+          key: 400,
           name: '勾选原图[400]',
-          matches: '@[desc="未选中,原图,复选框"] + [text="原图"]',
+          matches: '@[desc*="未选中"] + [text="原图"]',
           snapshotUrls: 'https://i.gkd.li/i/16730906',
         },
       ],
