@@ -26,7 +26,6 @@ export default defineGkdApp({
       desc: '关注->收藏->赞同->评论',
       enable: true,
       quickFind: true,
-      actionCdKey: 1000,
       activityIds: [
         'com.zhihu.android.app.ui.activity.HostActivity',
         'com.zhihu.android.app.ui.activity.MainActivity',
@@ -35,27 +34,32 @@ export default defineGkdApp({
         {
           key: 100,
           name: '新增关注',
+          actionCd: 5000,
           matches: '[text="新增关注"] - [vid="count_view"] - ImageView',
         },
         {
           key: 101,
           name: '收藏了我',
+          actionCd: 5000,
           matches: '[text="收藏了我"] - [vid="count_view"] - ImageView',
         },
         {
           key: 102,
           name: '赞同喜欢',
+          actionCd: 5000,
           matches: '[text="赞同喜欢"] - [vid="count_view"] - ImageView',
         },
         {
           key: 103,
           name: '评论转发',
+          actionCd: 5000,
           matches: '[text="评论转发"] - [vid="count_view"] - ImageView',
         },
         {
           key: 104,
           name: '关注订阅',
-          matches: '[text="评论转发"] - [vid="count_view"] - ImageView',
+          actionCd: 5000,
+          matches: '[text="关注订阅"] - [vid="count_view"] - ImageView',
         },
       ],
     },
