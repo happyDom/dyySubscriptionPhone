@@ -97,8 +97,16 @@ export default defineGkdApp({
       enable: true,
       rules: [
         {
+          key: 609,
+          name: '描述与实际不符[609]',
+          actionCd: 1000,
+          activityIds: 'com.kuaishou.live.webview.LiveWebViewActivity',
+          matches: '[text="描述与实际不符"]',
+        },
+        {
           key: 610,
           name: '虚假夸大[610]',
+          actionCdKey: 609,
           activityIds: 'com.yxcorp.gifshow.ad.webview.AdYodaActivity',
           matches: '@View[clickable=true] > [text*="虚假夸大"]',
         },
@@ -111,7 +119,7 @@ export default defineGkdApp({
         {
           key: 630,
           name: '提交[630]',
-          preKeys: [620],
+          preKeys: [609, 620],
           actionDelay: 150,
           quickFind: true,
           matches: 'Button[clickable=true][text="提交"]',
