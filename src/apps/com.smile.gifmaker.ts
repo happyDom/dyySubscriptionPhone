@@ -144,9 +144,21 @@ export default defineGkdApp({
           key: 701,
           name: '领取奖励[701]',
           actionCdKey: 700,
-          activityIds:
+          activityIds: [
             'com.yxcorp.gifshow.ad.neo.video.award.AwardVideoPlayActivity',
+            'com.yxcorp.gifshow.ad.neo.videov2.award.AwardVideoPlayActivityV2',
+          ],
           matches: 'TextView[text="已成功领取奖励"]',
+        },
+        {
+          key: 702,
+          name: '点 x[702]',
+          actionCdKey: 700,
+          activityIds: [
+            'com.yxcorp.gifshow.ad.neo.video.interstitial.InterstitialActivity',
+          ],
+          matches:
+            '[text="广告"] < ViewGroup - * @ViewGroup[clickable=true] +2 TextView[text$="s"]',
         },
         {
           key: 725,

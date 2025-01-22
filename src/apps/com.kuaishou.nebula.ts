@@ -91,5 +91,39 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 6,
+      name: '功能类-自动举报',
+      enable: true,
+      rules: [
+        {
+          key: 610,
+          name: '虚假夸大[610]',
+          activityIds: 'com.yxcorp.gifshow.ad.webview.AdYodaActivity',
+          matches: '@View[clickable=true] > [text*="虚假夸大"]',
+        },
+        {
+          key: 620,
+          name: '实际不符[620]',
+          preKeys: [610],
+          matches: 'View[clickable=true] >2 [text="商品宣传与实际不符"]',
+        },
+        {
+          key: 630,
+          name: '提交[630]',
+          preKeys: [620],
+          actionDelay: 150,
+          quickFind: true,
+          matches: 'Button[clickable=true][text="提交"]',
+        },
+        {
+          key: 640,
+          name: '完成[640]',
+          preKeys: [630],
+          quickFind: true,
+          matches: 'View[clickable=true][text="完成"]',
+        },
+      ],
+    },
   ],
 });
