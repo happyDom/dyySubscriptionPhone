@@ -44,6 +44,11 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     deprecatedKeys: [],
   },
   {
+    id: 'com.baidu.netdisk',
+    name: '百度网盘',
+    deprecatedKeys: [],
+  },
+  {
     id: 'com.jincheng.supercaculator',
     name: '全能计算器',
     deprecatedKeys: [],
