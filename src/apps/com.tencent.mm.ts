@@ -206,5 +206,19 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 7,
+      name: '全屏广告-倒计时广告',
+      desc: '自动关闭',
+      enable: true,
+      quickFind: true,
+      rules: [
+        {
+          key: 705,
+          name: '点关闭[705]',
+          matches: ['[text="已获得奖励"]', '[text="关闭"]'],
+        },
+      ],
+    },
   ],
 });
