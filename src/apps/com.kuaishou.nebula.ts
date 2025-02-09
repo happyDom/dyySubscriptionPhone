@@ -145,5 +145,39 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 7,
+      name: '全屏广告',
+      desc: '关闭或者跳过',
+      enable: true,
+      rules: [
+        {
+          key: 705,
+          name: '已成功领取奖励[705]',
+          matches: '[text="已成功领取奖励"]',
+          snapshotUrls: 'https://i.gkd.li/i/18723441',
+        },
+        {
+          key: 710,
+          name: 'x[710]',
+          matches: '@[vid="close_icon"] < * [text$="s"]',
+          snapshotUrls: 'https://i.gkd.li/i/18723482',
+        },
+      ],
+    },
+    {
+      key: 8,
+      name: '局部广告-悬浮按钮',
+      desc: '关闭',
+      enable: true,
+      rules: [
+        {
+          key: 805,
+          name: '点x[805]',
+          matches: '@ImageView < ViewGroup + * TextView[text="免广告"]',
+          snapshotUrls: 'https://i.gkd.li/i/18723499',
+        },
+      ],
+    },
   ],
 });
