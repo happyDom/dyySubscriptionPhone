@@ -194,7 +194,8 @@ export default defineGkdApp({
           actionCdKey: 700,
           quickFind: false,
           excludeMatches: '[text="秒后可获得奖励"]',
-          matches: 'TextView[text="广告"] + Image[text="feedback_icon"]',
+          matches:
+            'TextView[text="广告"] + Image[text="feedback_icon" || text="feedback"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/17266758',
         },
         {
