@@ -203,4 +203,9 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: '丰巢',
     deprecatedKeys: [],
   },
+  {
+    id: 'com.gkid.crazyrope',
+    name: '天天跳绳',
+    deprecatedKeys: [],
+  },
 ];
