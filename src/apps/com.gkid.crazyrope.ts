@@ -45,11 +45,11 @@ export default defineGkdApp({
       name: '分段广告-3',
       desc: '点 x',
       enable: true,
+      quickFind: true,
       rules: [
         {
           key: 305,
           name: '点 x[305]',
-          fastQuery: true,
           activityIds: 'com.gkid.crazyrope.ui.drillcommon.DrillActivity',
           matches: '[vid$="ad_container"] [vid="iv_close"]',
           snapshotUrls: 'https://i.gkd.li/i/19790536',
@@ -58,7 +58,6 @@ export default defineGkdApp({
           key: 310,
           name: '点 x[310]',
           preKeys: [305],
-          fastQuery: true,
           activityIds: 'com.gkid.crazyrope.ui.drillcommon.DrillActivity',
           matches: '[vid$="ad_container"] [vid="tv_close"]',
           snapshotUrls: 'https://i.gkd.li/i/19790570',
@@ -73,7 +72,6 @@ export default defineGkdApp({
         {
           key: 401,
           name: '为自己喝彩[401]',
-          fastQuery: true,
           activityIds:
             'com.gkid.crazyrope.ui.detail.rope.RopeTaskPopupActivity',
           matches: '[text^="为自己喝彩"]',
