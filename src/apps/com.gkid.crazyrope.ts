@@ -18,6 +18,11 @@ export default defineGkdApp({
           name: '暂不需要[100]',
           matches: '[vid="btn_close"][text="暂不需要"]',
         },
+        {
+          key: 101,
+          name: '点 x[101]',
+          matches: '@[vid="interstitial_close"] <2 * [text="广告"]',
+        },
       ],
     },
     {
@@ -32,6 +37,46 @@ export default defineGkdApp({
           name: '点 x[200]',
           activityIds: 'com.gkid.crazyrope.ui.drillcommon.DrillActivity',
           matches: '[text="免广告打扰"] < * + * [vid="iv_close"]',
+        },
+      ],
+    },
+    {
+      key: 3,
+      name: '分段广告-3',
+      desc: '点 x',
+      enable: true,
+      rules: [
+        {
+          key: 305,
+          name: '点 x[305]',
+          fastQuery: true,
+          activityIds: 'com.gkid.crazyrope.ui.drillcommon.DrillActivity',
+          matches: '[vid$="ad_container"] [vid="iv_close"]',
+          snapshotUrls: 'https://i.gkd.li/i/19790536',
+        },
+        {
+          key: 310,
+          name: '点 x[310]',
+          preKeys: [305],
+          fastQuery: true,
+          activityIds: 'com.gkid.crazyrope.ui.drillcommon.DrillActivity',
+          matches: '[vid$="ad_container"] [vid="tv_close"]',
+          snapshotUrls: 'https://i.gkd.li/i/19790570',
+        },
+      ],
+    },
+    {
+      key: 4,
+      name: '功能类-4',
+      enable: true,
+      rules: [
+        {
+          key: 401,
+          name: '为自己喝彩[401]',
+          fastQuery: true,
+          activityIds:
+            'com.gkid.crazyrope.ui.detail.rope.RopeTaskPopupActivity',
+          matches: '[text^="为自己喝彩"]',
         },
       ],
     },
