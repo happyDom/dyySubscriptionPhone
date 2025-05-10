@@ -147,7 +147,7 @@ export default defineGkdApp({
     },
     {
       key: 7,
-      name: '全屏广告',
+      name: '全屏广告-倒计时广告',
       desc: '关闭或者跳过',
       enable: true,
       rules: [
@@ -160,8 +160,16 @@ export default defineGkdApp({
         {
           key: 710,
           name: 'x[710]',
+          preKeys: [705],
           matches: '@[vid="close_icon"] < * [text$="s"]',
           snapshotUrls: 'https://i.gkd.li/i/18723482',
+        },
+        {
+          key: 715,
+          name: '坚持退出[715]',
+          preKeys: [705],
+          matches: '[text="坚持退出"]',
+          snapshotUrls: 'https://i.gkd.li/i/20138624',
         },
       ],
     },
