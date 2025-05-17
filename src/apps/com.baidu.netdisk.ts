@@ -15,8 +15,7 @@ export default defineGkdApp({
         {
           key: 0,
           name: '点 x[0]',
-          excludeMatches: '[vid="tv_select_all"]',
-          matches: '[vid="iv_close"]',
+          matches: '[vid="home_banner"] [vid="iv_close"]',
         },
         {
           key: 1,
