@@ -16,6 +16,7 @@ export default defineGkdApp({
           key: 0,
           name: '点 x[0]',
           matches: '[vid="iv_close"]',
+          activityIds: 'com.baidu.netdisk.ui.MainActivity',
         },
         {
           key: 1,
