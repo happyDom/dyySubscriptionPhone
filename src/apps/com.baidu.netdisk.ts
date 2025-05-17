@@ -15,13 +15,18 @@ export default defineGkdApp({
         {
           key: 0,
           name: '点 x[0]',
+          excludeMatches: '[vid="tv_select_all"]',
           matches: '[vid="iv_close"]',
-          activityIds: 'com.baidu.netdisk.ui.MainActivity',
         },
         {
           key: 1,
           name: '点 x[1]',
           matches: '[vid="common_guide_bar_close"]',
+        },
+        {
+          key: 2,
+          name: '点 x[2]',
+          matches: '[vid="close_ad"]',
         },
       ],
     },
