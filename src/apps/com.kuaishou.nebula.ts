@@ -112,10 +112,10 @@ export default defineGkdApp({
         },
         {
           key: 611,
-          name: '虚假虚假[611]',
+          name: '低俗擦边[611]',
           actionCdKey: 609,
           activityIds: 'com.kwai.component.misc.report.ReportYodaActivity',
-          matches: '[text="价格/价值虚假宣传"]',
+          matches: '[text="低俗擦边"]',
         },
         {
           key: 620,
@@ -184,6 +184,38 @@ export default defineGkdApp({
           name: '点x[805]',
           matches: '@ImageView < ViewGroup + * TextView[text="免广告"]',
           snapshotUrls: 'https://i.gkd.li/i/18723499',
+        },
+      ],
+    },
+    {
+      key: 9,
+      name: '功能类-不感兴趣',
+      desc: '该主播，该类型',
+      enable: true,
+      activityIds: 'com.yxcorp.gifshow.HomeActivity',
+      rules: [
+        {
+          key: 905,
+          name: '去选择[905]',
+          matches: '[text^="反馈成功"] + [text="去选择"]',
+        },
+        {
+          key: 910,
+          name: '该主播[910]',
+          preKeys: [905],
+          matches: '[text="该主播"]',
+        },
+        {
+          key: 911,
+          name: '该类型[911]',
+          preKeys: [905],
+          matches: '[text="该类型"]',
+        },
+        {
+          key: 920,
+          name: '提交[9920]',
+          preKeys: [910, 911],
+          matches: '[text="提交"]',
         },
       ],
     },
