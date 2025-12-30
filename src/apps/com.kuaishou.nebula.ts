@@ -229,7 +229,7 @@ export default defineGkdApp({
         {
           key: 920,
           name: '提交[920]',
-          matchDelay: 25,
+          matchDelay: 20,
           preKeys: [910, 911, 915, 916],
           matches: '[text*="提交"]',
         },
